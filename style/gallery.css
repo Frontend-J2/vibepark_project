@@ -1,0 +1,76 @@
+.galery_slide_container{
+                position: relative;
+                background-color: rgb(255, 255, 255);
+                height: 300px;
+                width: 600px;
+                margin: auto;
+            }
+            .galery_slide_item{
+                position: absolute;
+                overflow: hidden;
+                width: 150px;
+                height: 220px;
+                border-radius: 16px;
+                top: 35px;
+                left: 225px;
+                box-shadow: 0 10px 15px rgba(0,0,0,0.6);
+                transition: all .2s ease;
+            }
+            .active{
+                opacity: 1;
+                z-index: 10;
+                transform: translateX(0) scale(1);
+            }
+            .far_left{
+                opacity: 0.6;
+                z-index: 8;
+                transform: translateX(-200px) scale(0.6);
+            }
+            .far_right{
+                opacity: 0.6;
+                transform: translateX(200px) scale(0.6);
+                z-index: 8;
+            }
+            .left{
+                opacity: 0.8;
+                transform: translateX(-100px) scale(0.8);
+                z-index: 9;
+            }
+            .right{
+                opacity: 0.8;
+                transform: translateX(100px) scale(0.8);
+                z-index: 9;
+            }
+            .hide{
+                opacity: 0;
+                pointer-events: none;
+                left: 225px;
+            }
+            #prev_btn{
+                position: absolute;
+                top: 130px;
+                left: 5px;
+                height: 40px;
+                width: 5px;
+                font-size: 30px;
+                cursor:pointer;
+                user-select:none;
+            }
+            #next_btn{
+                position: absolute;
+                top: 130px;
+                left: 580px;
+                height: 40px;
+                width: 5px;
+                font-size: 30px;
+                cursor:pointer;
+                user-select:none;
+            }
+            .description{
+                width: 600px;
+                margin: auto;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
