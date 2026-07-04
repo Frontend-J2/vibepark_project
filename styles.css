@@ -36,3 +36,40 @@ td, th{
 	border: 1px solid black;
 	text-align: center;
 }
+
+/* Gombok teszt */
+.probagombok{
+    width: 100px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+}
+.probagombok p{
+    margin: 1px;
+    z-index: 100;
+    transition: all 0.1s ease;
+}
+.img-wrapper{
+    top: 4px;
+    left: 4px;
+    width: 0px;
+    height: 35px;
+    position: absolute;
+    display: block;
+    overflow: hidden;
+    transition: width 0.1s ease;
+}
+.img{
+    width: 100px;
+    height: 30px;
+    z-index: 99;
+}
+.probagombok:hover .img-wrapper{
+    width: 100px;
+}
+.probagombok:hover p{
+    color: wheat;
+}
