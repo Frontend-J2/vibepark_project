@@ -1,0 +1,34 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --bg-color: #f2efef; /*világos háttérszín*/
+    --surface-color: #34c8e8; /*kártyák háttere*/
+    --primary-color: #ff3f98; /*elsődleges szín*/
+    --text-color: #ffd43b; /*szöveg színe*/
+    --text-muted: #ff9d2f; /*halványított szöveg*/
+    --title-color: #ff6b45; /*cím szín*/
+    --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /*betűtipus*/
+}
+
+nav{
+    background-color: var(--primary-color);
+}
+.navbar-brand{
+    color: var(--surface-color) !important; 
+}
+.nav-item a{
+    color: var(--surface-color);
+}
+.navbar-nav .nav-link.active {
+    background-color: var(--surface-color) !important;
+    color: var(--primary-color) !important;
+}
+.nav-link:hover{
+    background-color: var(--surface-color);
+    color: var(--primary-color);
+}
+
