@@ -1,11 +1,32 @@
 .hero-section{
     height: 100vh;
-    width: 100vw;
+    width: 100%;
     position: relative;
     overflow: hidden;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+}
+#main-hero{
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 3;
+    transform-origin: center bottom;
+    animation-fill-mode: forwards;
+}
+#main-hero.grow{
+    animation: heroGrow .6s ease forwards;
+}
+@keyframes heroGrow{
+    from{
+        transform: scale(.2);
+    }
+    to{
+        transform: scale(1);
+    }
 }
 .hero-kep{
     position: absolute;
@@ -25,40 +46,24 @@
                 height 0.5s ease,
                 opacity 0.5s ease;
 }
-.activehero{
-    right: 0;
-    bottom: 0;
-    height: 100vh;
-    width: 100vw;
-    z-index: 10;
-    transform: translateX(0);
-}
-.activehero img{
-    height: 100vh;
-    width: 100vw;
-    object-fit: cover;
-    z-index: 9;
-}
-.oldactive{
-    right: 0;
-    bottom: 0;
-    width: 100vw;
-    height: 100vh;
-    transform: translateX(0);
-    z-index: 8;
-}
-.oldactive img{
-    height: 100vh;
-    width: 100vw;
-    object-fit: cover;
-    z-index: 7;
-}
 .hero-disc{
     position: absolute;
     width: 400px;
     left: 3rem;
     top: 15rem;
-    z-index: 100;
+    z-index: 10;
+
+    opacity: 0;
+    transform: translateX(25px);
+
+    transition:
+        opacity .5s ease,
+        transform 1s ease;
+}
+
+.hero-disc.show{
+    opacity: 1;
+    transform: translateX(0);
 }
 .elsohero,
 .masodikhero,
@@ -70,6 +75,7 @@
     border-radius: 10px;
     bottom: 5rem;
     z-index: 20;
+    cursor: pointer;
 }
 .elsohero img,
 .masodikhero img,
@@ -108,4 +114,32 @@
     bottom: 2rem;
     left: 3rem;
     z-index: 100;
+}
+@media (max-width: 720px){
+    .elsohero{
+        transform: translateX(-15rem);
+        z-index: 20;
+    }
+    .masodikhero{
+        transform: translateX(-8rem);
+        z-index: 19;
+    }
+    .harmadikhero{
+        transform: translateX(-1rem);
+        z-index: 18;
+    }
+}
+@media (max-width: 440px){
+    .elsohero{
+        transform: translateX(-7rem);
+        z-index: 20;
+    }
+    .masodikhero{
+        transform: translateX(-4rem);
+        z-index: 19;
+    }
+    .harmadikhero{
+        transform: translateX(-1rem);
+        z-index: 18;
+    }
 }
