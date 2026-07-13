@@ -1,0 +1,111 @@
+.hero-section{
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.hero-kep{
+    position: absolute;
+    right: 0;
+    box-shadow: 2px 2px 10px var(--primary-color);
+    transition: transform 0.5s ease,
+                width 0.5s ease,
+                height 0.5s ease,
+                opacity 0s ease,
+                box-shadow 2s ease;
+}
+.hero-kep img{
+    height: 250px;
+    width: 180px;
+    object-fit: cover;
+    transition: width 0.5s ease,
+                height 0.5s ease,
+                opacity 0.5s ease;
+}
+.activehero{
+    right: 0;
+    bottom: 0;
+    height: 100vh;
+    width: 100vw;
+    z-index: 10;
+    transform: translateX(0);
+}
+.activehero img{
+    height: 100vh;
+    width: 100vw;
+    object-fit: cover;
+    z-index: 9;
+}
+.oldactive{
+    right: 0;
+    bottom: 0;
+    width: 100vw;
+    height: 100vh;
+    transform: translateX(0);
+    z-index: 8;
+}
+.oldactive img{
+    height: 100vh;
+    width: 100vw;
+    object-fit: cover;
+    z-index: 7;
+}
+.hero-disc{
+    position: absolute;
+    width: 400px;
+    left: 3rem;
+    top: 15rem;
+    z-index: 100;
+}
+.elsohero,
+.masodikhero,
+.harmadikhero{
+    position: absolute;
+    height: 250px;
+    width: 180px;
+    overflow: hidden;
+    border-radius: 10px;
+    bottom: 5rem;
+    z-index: 20;
+}
+.elsohero img,
+.masodikhero img,
+.harmadikhero img,
+.hiddenhero img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.elsohero{
+    transform: translateX(-30rem);
+    box-shadow: 2px 2px 10px var(--surface-color);
+}
+.masodikhero{
+    transform: translateX(-17rem);
+    box-shadow: 2px 2px 10px var(--primary-color);
+}
+.harmadikhero{
+    transform: translateX(-4rem);
+    box-shadow: 2px 2px 10px var(--text-muted);
+}
+.hiddenhero{
+    opacity: 0;
+    transform: translateX(11rem);
+    position: absolute;
+    height: 250px;
+    width: 180px;
+    overflow: hidden;
+    border-radius: 10px;
+    bottom: 5rem;
+    z-index: 1;
+    box-shadow: 2px 2px 10px var(--surface-color);
+}
+.hero-section button{
+    position: absolute;
+    bottom: 2rem;
+    left: 3rem;
+    z-index: 100;
+}
