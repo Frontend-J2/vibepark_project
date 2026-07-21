@@ -41,20 +41,7 @@
             </li>
         </ul>
     </nav>
-    <script>
-        const navList = document.querySelector('.nav-list');
-        const navItem = document.querySelectorAll('.nav-item');
 
-        function hambOn(){
-            navList.classList.toggle("hidden-nav-list");
-
-            navItem.forEach((element, index) => {
-                setTimeout(() => {
-                    element.classList.toggle("hidden-nav-item");
-                }, 100 + index * 50);
-            })
-        }
-    </script>
 
     <div class="concert-list">
         <h3>Party is coming!</h3>
