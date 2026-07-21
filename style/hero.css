@@ -14,7 +14,7 @@
     height: 100%;
     object-fit: cover;
     z-index: 3;
-    transform-origin: center bottom;
+    transform-origin: 50% 75%;
     animation-fill-mode: forwards;
 }
 #main-hero.grow{
