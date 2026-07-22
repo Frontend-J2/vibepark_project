@@ -1,6 +1,6 @@
 .galery_slide_container{
                 position: relative;
-                background-color: rgb(255, 255, 255);
+                background: transparent;
                 height: 300px;
                 width: 600px;
                 margin: auto;

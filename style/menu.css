@@ -134,4 +134,9 @@
         opacity: 0;
         transform: translateX(-30px);
     }
+    .navbar-brand{
+        backdrop-filter: blur(10px);
+        border-radius: 10px;
+        padding: 1rem;
+    }
 }

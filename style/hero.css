@@ -7,6 +7,13 @@
     background-position: center;
     background-repeat: no-repeat;
 }
+.hero-logo{
+    position: relative;
+    max-width: 20%;
+    min-width: 150px;
+    z-index: 10;
+    margin: 3rem;
+}
 #main-hero{
     position: absolute;
     inset: 0;
@@ -46,6 +53,14 @@
                 height 0.5s ease,
                 opacity 0.5s ease;
 }
+
+
+
+/* #region Hero leírás*/
+
+    /* Hero képeinek leírása
+     ha mégis  használni akarjuk akkor ki kell törölni a display: none-t */
+     
 .hero-disc{
     position: absolute;
     width: 400px;
@@ -59,12 +74,15 @@
     transition:
         opacity .5s ease,
         transform 1s ease;
+        display: none;
 }
 
 .hero-disc.show{
     opacity: 1;
     transform: translateX(0);
 }
+/* #endregion */
+
 .elsohero,
 .masodikhero,
 .harmadikhero{
@@ -111,9 +129,25 @@
 }
 .hero-section button{
     position: absolute;
-    bottom: 2rem;
+    bottom: 1rem;
     left: 3rem;
     z-index: 100;
+    border: none;
+    padding: 1rem 1.5rem;
+    padding-right: 4rem;
+    color: black;
+    font-size: 20px;
+    background-color: transparent;
+    background-image: url(../img/hoverbrush/hoverbrush.png);
+    background-size: 100% 80%;
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+.hero-section button:hover{
+    transform: scale(1.1);
+    color: wheat;
 }
 @media (max-width: 720px){
     .elsohero{
