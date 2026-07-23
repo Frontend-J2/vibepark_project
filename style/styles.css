@@ -23,3 +23,48 @@ td, th{
     border: 1px solid black;
     text-align: center;
 }
+
+/*Űrlap formázás*/
+.contact-form {
+    max-width: 50%;
+    display: flex;
+    padding: 0.5rem;
+    flex-direction: column;
+    border: 3px solid transparent;
+    border-radius: 4px;
+    background:  linear-gradient(135deg, #ff3f98, #ff9d2f, #ffd43b) border-box;
+    align-items: center;
+    font-family: inherit;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+.contact-form input, .contact-form textarea {
+    padding: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+    border: 2px solid ;
+    font-size: 0,5rem;
+}
+.contact-form textarea {
+    resize: vertical;
+}
+.contact-form input:focus, .contact-form textarea:focus{
+    outline: none;
+    border-color: blue;
+}
+
+/*gyakori kérdések*/
+.q-btn{
+    cursor: pointer;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+}
+.questions-szulo{
+    height: 150px;
+    width: 500px;
+    background-color: var(--bg-color);
+}
+.kerdes{
+    cursor: pointer;
+}

@@ -63,15 +63,15 @@
     </div>
 
 
-    <section>
+    <section id="kapcsolat">
         <h1>Kapcsolat</h1>
         <p>Kérdésed van?! Írj nekünk! 😉 </p>
 
-        <form id="my-form" class="contact-form" action="https://formspree.io/f/mdarypqr">
+        <form id="my-form" class="contact-form" action="https://formspree.io/f/mdarypqr" method="POST">
             <input type="text" name="Név" placeholder="A te neved" required>
-            <input type="email" placeholder="E-mail címed" required>
+            <input type="email" name="Email" placeholder="E-mail címed" required>
             <textarea name="Üzenet" rows="6" placeholder="Írd ide az üzeneted..." required></textarea>
-            <button type="submit">Üzenet elküldése</button>
+            <button class="massege"  type="submit">Üzenet küldése</button>
         </form>
     </section>
 
