@@ -1,0 +1,39 @@
+.helyszin{
+    margin: auto;
+    width: 100%;
+}
+.terkep{
+    margin: auto;
+    display: block;
+}
+.nagy-terkep{
+    display: block;
+}
+.kozepes-terkep{
+    display: none;
+}
+.kicsi-terkep{
+    display: none;
+}
+@media (max-width: 850px) {
+    .nagy-terkep{
+        display: none;
+    }
+    .kozepes-terkep{
+        display: block;
+    }
+    .kicsi-terkep{
+        display: none;
+    }
+}
+@media (max-width: 640px) {
+    .nagy-terkep{
+        display: none;
+    }
+    .kozepes-terkep{
+        display: none;
+    }
+    .kicsi-terkep{
+        display: block;
+    }
+}
