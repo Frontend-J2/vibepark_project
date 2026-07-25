@@ -129,9 +129,11 @@
 }
 .hero-section button{
     position: absolute;
-    bottom: 1rem;
-    left: 3rem;
+    bottom: 20%;
+    left: 14%;
     z-index: 100;
+    width: 300px;
+    height: 70px;
     border: none;
     padding: 1rem 1.5rem;
     padding-right: 4rem;
@@ -149,6 +151,14 @@
     transform: scale(1.1);
     color: wheat;
 }
+
+
+@media (max-width: 1200px){
+    .hero-section button{
+        bottom: 40%;
+        left: 55%;
+    }
+}
 @media (max-width: 720px){
     .elsohero{
         transform: translateX(-15rem);
@@ -161,6 +171,16 @@
     .harmadikhero{
         transform: translateX(-1rem);
         z-index: 18;
+    }
+    .hero-section button{
+        bottom: 40%;
+        left: 44%;
+        width: 250px;
+        height: 60px;
+    }
+    .elsohero, .masodikhero, .harmadikhero{
+        height: 150px;
+        width: 125px;
     }
 }
 @media (max-width: 440px){
