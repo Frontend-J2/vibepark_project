@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vibe Park Szabadtéri és Klubhelyszín</title>
+    <link rel="stylesheet" href="../style/main.css">
+    <link rel="stylesheet" href="../style/menu.css">
+    <link rel="stylesheet" href="../style/jegyvasarlas.css">
+</head>
+<body>
+    <nav class="nav">    
+        <a class="navbar-brand" href="#top">Vibe Park | Budapest</a>
+        <button class="nav-toggler" onclick="hambOn()">
+            <span class="navbar-toggler-icon">&#9776;</span>
+        </button>
+        <ul class="nav-list hidden-nav-list">
+            <li class="nav-item hidden-nav-item">
+                <div class="img"></div>
+                <a class="nav-link" aria-current="page" href="../index.html">Kezdő oldal</a>
+            </li>
+            <li class="nav-item hidden-nav-item">
+                <div class="img"></div>
+                <a class="nav-link" href="../sites/programok.html">Programok</a>
+            </li>
+            <li class="nav-item hidden-nav-item">
+                <div class="img"></div>
+                <a class="nav-link" href="../sites/galeria.html">Galéria</a>
+            </li>
+            <li class="nav-item hidden-nav-item">
+                <div class="img"></div>
+                <a class="nav-link" href="../sites/rolunk.html">Információk\Rólunk</a>
+            </li>
+            <li class="nav-item hidden-nav-item">
+                <div class="img-active"></div>
+                <div class="img"></div>
+                <a class="nav-link" href="../sites/kapcsolat.html">Kapcsolat</a>
+            </li>
+            <li class="nav-item hidden-nav-item">
+                <div class="img"></div>
+                <a class="nav-link" href="../sites/jegyvasarlas.html">Jegyvásárlás</a>
+            </li>
+        </ul>
+    </nav>
+
+    <main class="ticket-page">
+    <!-- Program adatai -->
+        <section class="event-card">
+            <label for="event-select">Program</label>
+            <select id="event-select"></select>
+            <div class="event-info">
+                <p>📅 <span id="event-date"></span></p>
+                <p>🕒 <span id="event-time"></span></p>
+                <p>📍 <span id="event-place"></span></p>
+            </div>
+        </section>
+
+        <!-- Jegyek -->
+        <section class="ticket-list">
+            <article class="ticket-card">
+                <div>
+                    <h2>Teljes árú</h2>
+                    <p id="full-price">0 Ft</p>
+                </div>
+                <div class="counter">
+                    <button class="minus" data-type="full">-</button>
+                    <span id="full-count">0</span>
+                    <button class="plus" data-type="full">+</button>
+                </div>
+            </article>
+            <article class="ticket-card">
+                <div>
+                    <h2>Kedvezményes</h2>
+                    <p id="discount-price">0 Ft</p>
+                </div>
+                <div class="counter">
+                    <button class="minus" data-type="discount">-</button>
+                    <span id="discount-count">0</span>
+                    <button class="plus" data-type="discount">+</button>
+                </div>
+            </article>
+        </section>
+
+        <!-- Összesítő -->
+        <aside class="summary-card">
+            <h2>Rendelés</h2>
+            <div class="summary-row">
+                <span>Teljes árú</span>
+                <span id="summary-full">0 x 0 Ft</span>
+            </div>
+            <div class="summary-row">
+                <span>Kedvezményes</span>
+                <span id="summary-discount">0 x 0 Ft</span>
+            </div>
+            <hr>
+            <div class="summary-row total">
+                <span>Összesen</span>
+                <span id="total-price">0 Ft</span>
+            </div>
+            <button id="pay-btn">
+                Fizetés
+            </button>
+        </aside>
+    </main>
+
+    <script src="../js/menu.js"></script>
+    <script src="../js/programok.js"></script>
+    <script src="../js/jegyvasarlas.js"></script>
+</body>
+
+</html>
