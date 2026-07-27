@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vibe Park Szabadtéri és Klubhelyszín</title>
+    <link rel="stylesheet" href="../style/main.css">
+    <link rel="stylesheet" href="../style/menu.css">
+</head>
+<body>
+    <nav class="nav">    
+        <a class="navbar-brand" href="#top">Vibe Park | Budapest</a>
+        <button class="nav-toggler" onclick="hambOn()">
+            <span class="navbar-toggler-icon">&#9776;</span>
+        </button>
+        <ul class="nav-list hidden-nav-list">
+            <li class="nav-item hidden-nav-item">
+                <div class="img"></div>
+                <a class="nav-link" aria-current="page" href="../index.html">Kezdő oldal</a>
+            </li>
+            <li class="nav-item hidden-nav-item">
+                <div class="img-active"></div>
+                <div class="img"></div>
+                <a class="nav-link" href="../sites/programok.html">Programok</a>
+            </li>
+            <li class="nav-item hidden-nav-item">
+                <div class="img"></div>
+                <a class="nav-link" href="../sites/galeria.html">Galéria</a>
+            </li>
+            <li class="nav-item hidden-nav-item">
+                <div class="img"></div>
+                <a class="nav-link" href="../sites/rolunk.html">Információk\Rólunk</a>
+            </li>
+            <li class="nav-item hidden-nav-item">
+                <div class="img"></div>
+                <a class="nav-link" href="../sites/kapcsolat.html">Kapcsolat</a>
+            </li>
+            <li class="nav-item hidden-nav-item">
+                <div class="img"></div>
+                <a class="nav-link" href="../sites/jegyvasarlas.html">Jegyvásárlás</a>
+            </li>
+        </ul>
+    </nav>
+
+
+    <div class="concert-list">
+        <h3>Party is coming!</h3>
+        <div>
+            <div class="concert"> 
+                2026. július 18. - Midnight Echo|Alternatív rock - Nagyszínpad - 9 990 Ft <button class="ticket">Jegyvásárlás</button> <button>Részletek</button>
+            </div>
+
+             <div class="concert">
+                2026. július 25. - Neon Dreams|Pop koncert - Klubszínpad - 7 490 Ft <button class="ticket">Jegyvásárlás</button> <button>Részletek</button>
+            </div>
+
+             <div class="concert">
+                2026. augusztus 1. - Iron Wolves|Hard rock - Acélszínpad - 11 990 Ft <button class="ticket">Jegyvásárlás</button> <button>Részletek</button>
+            </div>
+
+             <div class="concert">
+                2026. augusztus 8. - Summer Beats Festival|Elektronikus zenei fesztivál - DJszínpad - 14 990 Ft <button class="ticket">Jegyvásárlás</button> <button>Részletek</button>
+            </div>
+         </div>
+
+         <!--utolsó 4 lehetne egy lenyíló ablakba -->
+         <div id="moreConcert" class="hidden">
+            <div class="concert">
+                2026. augusztus 15. - Aurora Lights|Indie pop - Nagyerdőszínpad - 8 490 Ft <button class="ticket">Jegyvásárlás</button> <button>Részletek</button>
+            </div>
+                
+             <div class="concert">
+                2026. augusztus 22. - Thunder Road|Blues & Rock est - Égboltszínpad - 6 990 Ft <button class="ticket">Jegyvásárlás</button> <button>Részletek</button>
+            </div> 
+                
+             <div class="concert">
+                2026. szeptember 5. - Electric Pulse|EDM Party - Pulzusszínpad - 10 490 Ft <button class="ticket">Jegyvásárlás</button> <button>Részletek</button>
+            </div>
+
+             <div class="concert">
+                2026. szeptember 19. - Folk Horizon|Népzenei Rock - Zúzdaszínpad - 5 990 Ft <button class="ticket">Jegyvásárlás</button>  <button>Részletek</button>
+            </div>
+         </div>
+            <!--a részletekre kattintva belehetne hozni innertext segítségével a zenekar stílusát, így ott is történik valami-->
+
+        <button>Mutass többet...</button>
+    </div>
+
+   
+
+   
+    <footer>
+        <p> &copy; Vibe Park - Ott a helyed!  </p>
+    </footer>
+    <script src="../js/menu.js"></script>
+</body>
+
+</html>

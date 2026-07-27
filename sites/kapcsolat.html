@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vibe Park Szabadtéri és Klubhelyszín</title>
+    <link rel="stylesheet" href="../style/main.css">
+    <link rel="stylesheet" href="../style/menu.css">
+    <link rel="stylesheet" href="../style/kapcsolat.css">
+</head>
+<body>
+    <nav class="nav">    
+        <a class="navbar-brand" href="#top">Vibe Park | Budapest</a>
+        <button class="nav-toggler" onclick="hambOn()">
+            <span class="navbar-toggler-icon">&#9776;</span>
+        </button>
+        <ul class="nav-list hidden-nav-list">
+            <li class="nav-item hidden-nav-item">
+                <div class="img"></div>
+                <a class="nav-link" aria-current="page" href="../index.html">Kezdő oldal</a>
+            </li>
+            <li class="nav-item hidden-nav-item">
+                <div class="img"></div>
+                <a class="nav-link" href="../sites/programok.html">Programok</a>
+            </li>
+            <li class="nav-item hidden-nav-item">
+                <div class="img"></div>
+                <a class="nav-link" href="../sites/galeria.html">Galéria</a>
+            </li>
+            <li class="nav-item hidden-nav-item">
+                <div class="img"></div>
+                <a class="nav-link" href="../sites/rolunk.html">Információk\Rólunk</a>
+            </li>
+            <li class="nav-item hidden-nav-item">
+                <div class="img-active"></div>
+                <div class="img"></div>
+                <a class="nav-link" href="../sites/kapcsolat.html">Kapcsolat</a>
+            </li>
+            <li class="nav-item hidden-nav-item">
+                <div class="img"></div>
+                <a class="nav-link" href="../sites/jegyvasarlas.html">Jegyvásárlás</a>
+            </li>
+        </ul>
+    </nav>
+
+
+    <div class="helyszin">
+        <h3>Fesztivál helyszín</h3>
+        <iframe class="terkep nagy-terkep" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10772.68925155825!2d18.98769287156676!3d47.544974971246354!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4741d92120f5c5ad%3A0xe27c87fc4236e268!2zQnVkYXBlc3QsIFN6w6lwdsO2bGd5!5e0!3m2!1shu!2shu!4v1784877838202!5m2!1shu!2shu" width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+        <iframe class="terkep kozepes-terkep" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10772.68925155825!2d18.98769287156676!3d47.544974971246354!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4741d92120f5c5ad%3A0xe27c87fc4236e268!2zQnVkYXBlc3QsIFN6w6lwdsO2bGd5!5e0!3m2!1shu!2shu!4v1784877838202!5m2!1shu!2shu" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+        <iframe class="terkep kicsi-terkep" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10772.68925155825!2d18.98769287156676!3d47.544974971246354!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4741d92120f5c5ad%3A0xe27c87fc4236e268!2zQnVkYXBlc3QsIFN6w6lwdsO2bGd5!5e0!3m2!1shu!2shu!4v1784877838202!5m2!1shu!2shu" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+    </div>
+
+    <table>
+        <tr>
+            <td>Elérhetőségek</td>
+            <td>E-mail cím: info@hangar42.hu</td>
+            <td>Telefonszám: +36123456789</td>
+            
+        </tr>
+    </table>
+
+    <div>
+         <h2>Megközelítés</h2>
+        <p><!-- Éva! ide AI-al tudsz generálni megközelítésre tippeket--></p>
+    </div>
+
+
+    <section id="kapcsolat">
+        <h1>Kapcsolat</h1>
+        <p>Kérdésed van?! Írj nekünk! 😉 </p>
+
+        <form id="my-form" class="contact-form" action="https://formspree.io/f/mdarypqr" method="POST">
+            <input type="text" name="Név" placeholder="A te neved" required>
+            <input type="email" name="Email" placeholder="E-mail címed" required>
+            <textarea name="Üzenet" rows="6" placeholder="Írd ide az üzeneted..." required></textarea>
+            <button class="massege"  type="submit">Üzenet küldése</button>
+        </form>
+    </section>
+
+   
+    <footer>
+        <p> &copy; Vibe Park - Ott a helyed!  </p>
+    </footer>
+    <script src="../js/menu.js"></script>
+</body>
+
+</html>

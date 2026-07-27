@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vibe Park Szabadtéri és Klubhelyszín</title>
+    <link rel="stylesheet" href="style/main.css">
+    <link rel="stylesheet" href="style/gallery.css">
+    <link rel="stylesheet" href="style/hero.css">
+    <link rel="stylesheet" href="style/menu.css">
+    <link rel="stylesheet" href="style/koncert.css">
+</head>
+
+<body>
+    <nav class="nav">
+        <a class="navbar-brand" href="#top">
+            <p style="color: #ff3f98; padding-right: 8px; font-weight: bold;">Vibe</p>
+            <p style="color: #34c8e8; padding-right: 8px; font-weight: bold;">Park</p>| Budapest
+        </a>
+        <button class="nav-toggler" onclick="hambOn()">
+            <span class="navbar-toggler-icon">&#9776;</span>
+        </button>
+        <ul class="nav-list hidden-nav-list">
+            <li class="nav-item hidden-nav-item">
+                <div class="img-active"></div>
+                <div class="img"></div>
+                <a class="nav-link" aria-current="page" href="index.html">Kezdő oldal</a>
+            </li>
+            <li class="nav-item hidden-nav-item">
+                <div class="img"></div>
+                <a class="nav-link" href="sites/programok.html">Programok</a>
+            </li>
+            <li class="nav-item hidden-nav-item">
+                <div class="img"></div>
+                <a class="nav-link" href="sites/galeria.html">Galéria</a>
+            </li>
+            <li class="nav-item hidden-nav-item">
+                <div class="img"></div>
+                <a class="nav-link" href="sites/rolunk.html">Információk\Rólunk</a>
+            </li>
+            <li class="nav-item hidden-nav-item">
+                <div class="img"></div>
+                <a class="nav-link" href="sites/kapcsolat.html">Kapcsolat</a>
+            </li>
+            <li class="nav-item hidden-nav-item">
+                <div class="img"></div>
+                <a class="nav-link" href="sites/jegyvasarlas.html">Jegyvásárlás</a>
+            </li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="hero-section" id="top">
+            <img id="main-hero" src="" alt="">
+            <img src="img/logo/logo.png" alt="Vibe Park logo" class="hero-logo">
+            <div class="hero-disc">
+                <h2 id="heroH2"></h2>
+                <p id="heroP"></p>
+            </div>
+
+            <button class="ticket">Jegyvásárlás</button>
+
+            <div class="hero-kep">
+                <img src="img/hero/hero1.png" alt="">
+            </div>
+
+            <div class="hero-kep">
+                <img src="img/hero/hero2.png" alt="">
+            </div>
+
+            <div class="hero-kep">
+                <img src="img/hero/hero3.png" alt="">
+            </div>
+
+            <div class="hero-kep">
+                <img src="img/hero/hero4.png" alt="">
+            </div>
+
+            <div class="hero-kep">
+                <img src="img/hero/hero5.png" alt="">
+            </div>
+
+        </section>
+
+
+        <section class="koncertek-grid">
+
+            <!-- 1. Koncert dj vel-->
+            <div class="koncert-kartya">
+                <div class="kep-tarolo">
+                    <img src="img/koncertek/belteri.png" alt="beltéri koncert dj vel">
+                </div>
+                <div class="koncert-tartalom">
+                    <span class="datum">2026. MÁJUS 15.</span>
+                    <h3>Neon Beats Live Dj Nórival</h3>
+                    <p class="leiras">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor
+                        incididunt ut labore et dolore magna aliqua.</p>
+                    <a href="#" class="jegy-gomb">Jegyvásárlás</a>
+                </div>
+            </div>
+
+            <!-- 2. Koncert -->
+            <div class="koncert-kartya">
+                <div class="kep-tarolo">
+                    <img src="img/koncertek/elozene.png" alt="élő zene a színpadon">
+                </div>
+                <div class="koncert-tartalom">
+                    <span class="datum">2026. JÚNIUS 02.</span>
+                    <h3>Dübörgő Éjszakák</h3>
+                    <p class="leiras">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                        ex ea commodo consequat.</p>
+                    <a href="#" class="jegy-gomb">Jegyvásárlás</a>
+                </div>
+            </div>
+
+            <!-- 3. Koncert -->
+            <div class="koncert-kartya">
+                <div class="kep-tarolo">
+                    <img src="img/koncertek/este.png" alt="Esti bulira hangolódás">
+                </div>
+                <div class="koncert-tartalom">
+                    <span class="datum">2026. JÚLIUS 20.</span>
+                    <h3>Summer Fest 2026</h3>
+                    <p class="leiras">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+                        fugiat nulla pariatur.</p>
+                    <a href="#" class="jegy-gomb">Jegyvásárlás</a>
+                </div>
+            </div>
+
+            <!-- 3. Koncert nappali képpel -->
+            <div class="koncert-kartya">
+                <div class="kep-tarolo">
+                    <img src="img/koncertek/szabadter.png" alt="nappali szabadtér">
+                </div>
+                <div class="koncert-tartalom">
+                    <span class="datum">2026. JÚLIUS 20.</span>
+                    <h3>Summer Fest 2026</h3>
+                    <p class="leiras">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                        ex ea commodo consequat.</p>
+                    <a href="#" class="jegy-gomb">Jegyvásárlás</a>
+                </div>
+            </div>
+
+            <!-- 4. Koncert dj vel-->
+            <div class="koncert-kartya">
+                <div class="kep-tarolo">
+                    <img src="img/koncertek/belteri2.png" alt="beltéri koncert dj vel">
+                </div>
+                <div class="koncert-tartalom">
+                    <span class="datum">2026. Augusztus 15.</span>
+                    <h3>Neon Beats Live Dj Zsoltival</h3>
+                    <p class="leiras">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor
+                        incididunt ut labore et dolore magna aliqua.</p>
+                    <a href="#" class="jegy-gomb">Jegyvásárlás</a>
+                </div>
+            </div>
+
+        </section>
+
+        <section class="hex-gallery">
+            <div class="hex-grid">
+            <div class="hex-grid-row">
+                <div class="hex"><img src="IMG/galeria/gallery00.jpg" alt="Vibe Park"></div>
+                <div class="hex"><img src="IMG/galeria/gallery01.jpg" alt="Vibe Park"></div>
+                <div class="hex"><img src="IMG/galeria/gallery02.jpg" alt="Vibe Park"></div>
+                <div class="hex"><img src="IMG/galeria/gallery03.jpg" alt="Vibe Park"></div>
+            </div>
+            <div class="hex-grid-row-offset">
+                <div class="hex"><img src="IMG/galeria/gallery04.jpg" alt="Vibe Park"></div>
+                <div class="hex"><img src="IMG/galeria/gallery05.jpg" alt="Vibe Park"></div>
+                <div class="hex"><img src="IMG/galeria/gallery06.jpg" alt="Vibe Park"></div>
+            </div>
+            <div class="hex-grid-row">
+                <div class="hex"><img src="IMG/galeria/gallery07.jpg" alt="Vibe Park"></div>
+                <div class="hex"><img src="IMG/galeria/gallery08.jpg" alt="Vibe Park"></div>
+                <div class="hex"><img src="IMG/galeria/gallery09.jpg" alt="Vibe Park"></div>
+                <div class="hex"><img src="IMG/galeria/gallery10.jpg" alt="Vibe Park"></div>
+            </div>
+            </div>
+        </section>
+
+        <div class="faq">
+            <button class="q-btn">Gyakori kérdések</button>
+            <div class="q-modal" hidden>
+                <div class="questions-szulo">
+                    <div class="kerdesek">
+                        <h4 class="kerdes">Aenean efficitur augue pharetra, sagittis metus et, elementum metus?</h4>
+                        <p class="valasz" hidden>Vivamus ut sapien et ex fringilla commodo.</p>
+                    </div>
+
+                    <div class="kerdesek">
+                        <h4 class="kerdes">Duis tempus tellus euismod velit congue luctus?</h4>
+                        <p class="valasz" hidden>In hac habitasse platea dictumst.</p>
+                    </div>
+
+                    <div class="kerdesek">
+                        <h4 class="kerdes">Nulla vitae dolor euismod, ultrices magna a, tristique turpis?</h4>
+                        <p class="valasz" hidden>Nullam fermentum suscipit magna, ac venenatis nisl sagittis vitae.</p>
+                    </div>
+
+                    <div class="kerdesek">
+                        <h4 class="kerdes">Curabitur at diam efficitur, bibendum sem in, molestie nulla?</h4>
+                        <p class="valasz" hidden>Praesent accumsan leo sapien, et pellentesque leo faucibus nec.</p>
+                    </div>
+
+                    <div class="kerdesek">
+                        <h4 class="kerdes">Praesent at magna at purus ultrices bibendum?</h4>
+                        <p class="valasz" hidden>Donec pellentesque orci at augue tincidunt</p>
+                    </div>
+                </div>
+             </div>
+        </div>
+
+        <div class="hirlevel">
+            Irattkozz fel hírlevelünkre, hogy első kézből értesülj akcióinkról!
+            <button>Feliratkozás</button>
+        </div>
+    </main>
+
+    <footer>
+        <p> &copy; Vibe Park - Ott a helyed! </p>
+    </footer>
+
+    <script src="js/gallery.js"></script>
+    <script src="js/hero.js"></script>
+    <script src="js/menu.js"></script>
+    <script src="js/questions.js"></script>
+</body>
+
+</html>

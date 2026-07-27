@@ -1,0 +1,81 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+:root{
+    --bg-color: #f2efef; /*világos háttérszín*/
+    --surface-color: #34c8e8; /*kártyák háttere*/
+    --primary-color: #ff3f98; /*elsődleges szín*/
+    --text-color: #ffd43b; /*szöveg színe*/
+    --text-muted: #ff9d2f; /*halványított szöveg*/
+    --title-color: #ff6b45; /*cím szín*/
+    --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /*betűtipus*/
+}
+
+body {
+    overflow-x: hidden;
+    width: 100%;
+}
+
+td, th{
+    border: 1px solid black;
+    text-align: center;
+}
+
+/*Űrlap formázás*/
+.contact-form {
+    max-width: 50%;
+    display: flex;
+    padding: 0.5rem;
+    flex-direction: column;
+    border: 3px solid transparent;
+    border-radius: 4px;
+    background:  linear-gradient(135deg, #ff3f98, #ff9d2f, #ffd43b) border-box;
+    align-items: center;
+    font-family: inherit;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+.contact-form input, .contact-form textarea {
+    padding: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+    border: 2px solid ;
+    font-size: 0,5rem;
+}
+.contact-form textarea {
+    resize: vertical;
+}
+.contact-form input:focus, .contact-form textarea:focus{
+    outline: none;
+    border-color: blue;
+}
+
+/*gyakori kérdések*/
+.q-btn{
+    cursor: pointer;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+}
+.q-modal{
+    bottom: 0px;
+    left: 105px;
+    right: 50px;
+    position: absolute;
+    border: 2px solid rgb(216, 99, 76);
+    background: rgb(232, 232, 147);
+    opacity: 0.5;
+}
+.faq{
+    position: relative;
+}
+.kerdes{
+    cursor: pointer;
+}
+.kerdes:hover{
+    color: #ff6b45;
+}
