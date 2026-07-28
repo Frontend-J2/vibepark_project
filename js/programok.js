@@ -6,11 +6,21 @@ const programs = [
         time: "20:00",
         place: "Vibe Park Budapest",
         image: "img/koncertek/belteri.png",
-        prices: {
-            full: 6000,
-            discount: 4500
-        }
+        days: 1,
+        tickets: [
+            {
+                id: "full",
+                name: "Teljes árú",
+                price: 6000
+            },
+            {
+                id: "discount",
+                name: "Kedvezményes",
+                price: 4500
+            }
+        ]
     },
+
     {
         id: 2,
         name: "Dübörgő Éjszakák",
@@ -18,11 +28,21 @@ const programs = [
         time: "21:00",
         place: "Vibe Park Budapest",
         image: "img/koncertek/elozene.png",
-        prices: {
-            full: 6500,
-            discount: 5000
-        }
+        days: 1,
+        tickets: [
+            {
+                id: "full",
+                name: "Teljes árú",
+                price: 6500
+            },
+            {
+                id: "discount",
+                name: "Kedvezményes",
+                price: 5000
+            }
+        ]
     },
+
     {
         id: 3,
         name: "Summer Fest 2026",
@@ -30,11 +50,31 @@ const programs = [
         time: "18:00",
         place: "Vibe Park Budapest",
         image: "img/koncertek/este.png",
-        prices: {
-            full: 8000,
-            discount: 6500
-        }
+        days: 3,
+        tickets: [
+            {
+                id: "full",
+                name: "Teljes árú",
+                price: 8000
+            },
+            {
+                id: "discount",
+                name: "Kedvezményes",
+                price: 6500
+            },
+            {
+                id: "full-pass",
+                name: "Teljes árú bérlet",
+                price: 18000
+            },
+            {
+                id: "discount-pass",
+                name: "Kedvezményes bérlet",
+                price: 15000
+            }
+        ]
     },
+
     {
         id: 4,
         name: "Summer Fest 2026 - Szabadtéri",
@@ -42,11 +82,21 @@ const programs = [
         time: "16:00",
         place: "Vibe Park Budapest",
         image: "img/koncertek/szabadter.png",
-        prices: {
-            full: 7000,
-            discount: 5500
-        }
+        days: 1,
+        tickets: [
+            {
+                id: "full",
+                name: "Teljes árú",
+                price: 7000
+            },
+            {
+                id: "discount",
+                name: "Kedvezményes",
+                price: 5500
+            }
+        ]
     },
+
     {
         id: 5,
         name: "Neon Beats Live Dj Zsoltival",
@@ -54,9 +104,18 @@ const programs = [
         time: "20:00",
         place: "Vibe Park Budapest",
         image: "img/koncertek/belteri2.png",
-        prices: {
-            full: 6000,
-            discount: 4500
-        }
+        days: 1,
+        tickets: [
+            {
+                id: "full",
+                name: "Teljes árú",
+                price: 6000
+            },
+            {
+                id: "discount",
+                name: "Kedvezményes",
+                price: 4500
+            }
+        ]
     }
 ];

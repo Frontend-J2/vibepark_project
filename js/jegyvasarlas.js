@@ -1,31 +1,65 @@
 const eventSelect = document.getElementById("event-select");
 const eventDate = document.getElementById("event-date");
 const eventTime = document.getElementById("event-time");
-const fullPrice = document.getElementById("full-price");
-const discountPrice = document.getElementById("discount-price");
-const fullCount = document.getElementById("full-count");
-const discountCount = document.getElementById("discount-count");
-const summaryFull = document.getElementById("summary-full");
-const summaryDiscount = document.getElementById("summary-discount");
-const totalPrice = document.getElementById("total-price");
 const eventPlace = document.getElementById("event-place");
 
-let selectedProgram;
-let fullTickets = 0;
-let discountTickets = 0;
+const ticketList = document.getElementById("ticket-list");
+const summaryList = document.getElementById("summary-list");
+const totalPrice = document.getElementById("total-price");
 
+let selectedProgram = null;
+let ticketCounts = {};
+
+// Programok betöltése a lenyíló listába
 programs.forEach(program => {
     const option = document.createElement("option");
+
     option.value = program.id;
     option.textContent = program.name;
+
     eventSelect.appendChild(option);
 });
 
+// URL paraméter kezelése
 const params = new URLSearchParams(window.location.search);
 const id = Number(params.get("id"));
 
 if (id) {
     eventSelect.value = id;
+}
+
+// Jegyek kirajzolása
+function renderTickets() {
+    ticketList.innerHTML = "";
+    ticketCounts = {};
+    selectedProgram.tickets.forEach(ticket => {
+        ticketCounts[ticket.id] = 0;
+
+        const article = document.createElement("article");
+        article.className = "ticket-card";
+        article.innerHTML = `
+            <div>
+                <h2>${ticket.name}${ticket.id.includes("pass") ? ` (${selectedProgram.days} napos)` : ""}</h2>
+                <p>${ticket.price.toLocaleString("hu-HU")} Ft</p>
+            </div>
+            <div class="counter">
+                <button
+                    class="minus"
+                    data-ticket="${ticket.id}">
+                    -
+                </button>
+                <span id="count-${ticket.id}">
+                    0
+                </span>
+                <button
+                    class="plus"
+                    data-ticket="${ticket.id}">
+                    +
+                </button>
+            </div>`;
+
+        ticketList.appendChild(article);
+    });
 }
 
 function loadProgram(id) {
@@ -35,51 +69,53 @@ function loadProgram(id) {
     eventDate.textContent = selectedProgram.date;
     eventTime.textContent = selectedProgram.time;
     eventPlace.textContent = selectedProgram.place;
-    fullPrice.textContent = `${selectedProgram.prices.full.toLocaleString("hu-HU")} Ft`;
-    discountPrice.textContent = `${selectedProgram.prices.discount.toLocaleString("hu-HU")} Ft`;
 
-    fullTickets = 0;
-    discountTickets = 0;
-
+    renderTickets();
     updateSummary();
 }
 
 function updateSummary() {
-    fullCount.textContent = fullTickets;
-    discountCount.textContent = discountTickets;
+    summaryList.innerHTML = "";
+    let total = 0;
 
-    summaryFull.textContent = `${fullTickets} × ${selectedProgram.prices.full.toLocaleString("hu-HU")} Ft`;
-    summaryDiscount.textContent = `${discountTickets} × ${selectedProgram.prices.discount.toLocaleString("hu-HU")} Ft`;
-
-    const total = fullTickets * selectedProgram.prices.full + discountTickets * selectedProgram.prices.discount;
+    selectedProgram.tickets.forEach(ticket => {
+        const count = ticketCounts[ticket.id];
+        // Frissítjük a számlálót a kártyán
+        const counter = document.getElementById(`count-${ticket.id}`);
+        if (counter) {
+            counter.textContent = count;
+        }
+        // Összesítő sor
+        const row = document.createElement("div");
+        row.className = "summary-row";
+        row.innerHTML = `
+            <span>${ticket.name}${ticket.id.includes("pass") ? ` (${selectedProgram.days} napos)` : ""}</span>
+            <span>${count} × ${ticket.price.toLocaleString("hu-HU")} Ft</span>
+        `;
+        summaryList.appendChild(row);
+        total += count * ticket.price;
+    });
     totalPrice.textContent = `${total.toLocaleString("hu-HU")} Ft`;
 }
 
+ticketList.addEventListener("click", (e) => {
+    const button = e.target.closest("button");
+    if (!button) return;
+    const ticketId = button.dataset.ticket;
+    if (!ticketId) return;
+    if (button.classList.contains("plus")) {
+        ticketCounts[ticketId]++;
+    }
+    if (button.classList.contains("minus")) {
+        if (ticketCounts[ticketId] > 0) {
+            ticketCounts[ticketId]--;
+        }
+    }
+    updateSummary();
+});
+
 eventSelect.addEventListener("change", () => {
     loadProgram(eventSelect.value);
-});
-
-document.querySelectorAll(".plus").forEach(button => {
-    button.addEventListener("click", () => {
-        if (button.dataset.type === "full") {
-            fullTickets++;
-        } else {
-            discountTickets++;
-        }
-        updateSummary();
-    });
-});
-
-document.querySelectorAll(".minus").forEach(button => {
-    button.addEventListener("click", () => {
-        if (button.dataset.type === "full" && fullTickets > 0) {
-            fullTickets--;
-        }
-        if (button.dataset.type === "discount" && discountTickets > 0) {
-            discountTickets--;
-        }
-        updateSummary();
-    });
 });
 
 loadProgram(eventSelect.value || programs[0].id);
