@@ -56,32 +56,26 @@
 
 
 
-/* #region Hero leírás*/
-
-    /* Hero képeinek leírása
-     ha mégis  használni akarjuk akkor ki kell törölni a display: none-t */
      
 .hero-disc{
-    position: absolute;
-    width: 400px;
-    left: 3rem;
-    top: 15rem;
-    z-index: 10;
+    position: relative;
+    z-index: 200;
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
 
-    opacity: 0;
-    transform: translateX(25px);
-
-    transition:
-        opacity .5s ease,
-        transform 1s ease;
-        display: none;
+    padding-left: 4rem;
+    color: white;
+    color: var(--text-color);
+    text-shadow: -2px -2px 4px rgb(0, 0, 0), 2px 2px 4px rgb(0, 0, 0);
+}
+.hero-disc h1{
+    font-size: 40px;
+}
+.hero-disc p{
+    font-size: 25px;
 }
 
-.hero-disc.show{
-    opacity: 1;
-    transform: translateX(0);
-}
-/* #endregion */
 
 .elsohero,
 .masodikhero,
@@ -113,7 +107,7 @@
 }
 .harmadikhero{
     transform: translateX(-4rem);
-    box-shadow: 2px 2px 10px var(--text-muted);
+    box-shadow: 2px 2px 10px var(--text-color);
 }
 .hiddenhero{
     opacity: 0;
@@ -128,16 +122,12 @@
     box-shadow: 2px 2px 10px var(--surface-color);
 }
 .hero-section button{
-    position: absolute;
-    bottom: 20%;
-    left: 14%;
-    z-index: 100;
     width: 300px;
-    height: 70px;
-    border: none;
     padding: 1rem 1.5rem;
     padding-right: 4rem;
-    color: black;
+    height: 70px;
+    border: none;
+    color: var(--text-color);
     font-size: 20px;
     background-color: transparent;
     background-image: url(../img/hoverbrush/hoverbrush.png);
@@ -149,7 +139,7 @@
 }
 .hero-section button:hover{
     transform: scale(1.1);
-    color: wheat;
+    color: var(--text-hover);
 }
 
 

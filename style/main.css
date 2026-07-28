@@ -10,14 +10,20 @@
     --surface-color: #34c8e8; /*kártyák háttere*/
     --primary-color: #ff3f98; /*elsődleges szín*/
     --text-color: #ffd43b; /*szöveg színe*/
-    --text-muted: #ff9d2f; /*halványított szöveg*/
+    --text-hover: #0f0800; /*hover/active szöveg szín*/
     --title-color: #ff6b45; /*cím szín*/
     --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /*betűtipus*/
+    --background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
 }
 
 body {
     overflow-x: hidden;
     width: 100%;
+    /* Sötét lila -> mélykék átmenet */
+    background: var(--background);
+    background-attachment: fixed; /* Görgetésnél is egyben marad a háttér */
+    min-height: 100vh;
+    margin: 0;
 }
 
 td, th{

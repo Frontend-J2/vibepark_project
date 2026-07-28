@@ -1,8 +1,6 @@
 const herokepek = [...document.querySelectorAll(".hero-kep")];
 const heroSection = document.querySelector(".hero-section");
 const mainHero = document.getElementById('main-hero');
-const heroh2 = document.getElementById('heroH2');
-const herop = document.getElementById('heroP');
 const heroData = [{  title: "Kép 1",
                     text: "Ez az első kép leírása.",
                     image: "img/hero/hero1.png"
@@ -27,12 +25,10 @@ const heroData = [{  title: "Kép 1",
 let active_index = 0;
 let slideInterval;
 mainHero.addEventListener("animationend", () => {
-    console.log("Animáció vége:", active_index);
         heroSection.style.backgroundImage = `url("${mainHero.src}")`;
     });
   
 function updateherokep() {
-    console.log("update", active_index);
     let elsoheroindex = (active_index + 1) % herokepek.length;
     let masodikheroindex = (active_index + 2) % herokepek.length;
     let harmadikheroindex = (active_index + 3) % herokepek.length;
@@ -43,15 +39,6 @@ function updateherokep() {
     mainHero.src = heroData[active_index].image;
     mainHero.classList.add("grow");
 
-    const heroDisc = document.querySelector(".hero-disc");
-
-    heroDisc.classList.remove("show");
-    setTimeout(() => {
-        heroH2.innerText = heroData[active_index].title;
-        heroP.innerText = heroData[active_index].text;
-
-        heroDisc.classList.add("show");
-    }, 500);
 
     herokepek.forEach((elem, i) => {
         elem.classList.remove(
@@ -74,8 +61,6 @@ function updateherokep() {
 }
 
 function startSlider() {
-    console.log("interval");
-    
     clearInterval(slideInterval);
     slideInterval = setInterval(() => {
         active_index = (active_index + 1) % herokepek.length;

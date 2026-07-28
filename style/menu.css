@@ -23,9 +23,9 @@
     width: 100%;
     flex-direction: row;
     justify-content: space-between;
-    background: transparent;
+    background: rgba(0, 0, 0, 0.3);
     position: fixed;
-    z-index: 100;
+    z-index: 1000;
     width: 100%;
     backdrop-filter: blur(10px);
     transition: transform 0.5s ease;
@@ -39,7 +39,7 @@
     font-size: 25px;
     padding-left: 1rem;
     text-decoration: none;
-    color: var(--text-muted);
+    color: var(--text-color);
 }
 .nav-list{
     width: 75%;
@@ -72,7 +72,7 @@
     clip-path: inset(0 0 0 0)
 }
 .nav-item:hover .nav-link{
-    color: black;
+    color: var(--text-hover);
 }
 .img-active{
     position: absolute;
