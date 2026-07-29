@@ -1,18 +1,36 @@
 const gomb = document.querySelector(".q-btn")
-const questions = document.querySelector(".questions-szulo")
+const valaszok = document.querySelectorAll(".valasz")
 const kerdesek = document.querySelectorAll(".kerdes")
-
+const modal = document.querySelector(".q-modal")
+const faq = document.querySelector(".faq")
 
 gomb.addEventListener("click", function(){
-    questions.hidden = !questions.hidden
+    modal.hidden = !modal.hidden
 });
 
-gomb.addEventListener("click", function(kerdes){
-    kerdes.hidden = !kerdes.hidden
-});
 
 kerdesek.forEach(function(kerdes){
     kerdes.addEventListener("click", function(){
+        const valasz = kerdes.nextElementSibling;
+        const nyitvaVolt = !valasz.hidden;
 
+        valaszok.forEach(function(valasz){
+            valasz.hidden = true;
+        });
+        
+        if(!nyitvaVolt){
+        valasz.hidden = false;
+        }
+             
     });
+});
+
+document.addEventListener("click", function(event){
+    if(!modal.hidden && !faq.contains(event.target)){
+        modal.hidden = true;
+
+        valaszok.forEach(function(valasz){
+            valasz.hidden = true;
+        });
+    }
 });
