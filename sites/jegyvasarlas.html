@@ -80,6 +80,82 @@
         </aside>
     </main>
 
+    <!-- FIZETÉSI MODAL -->
+    <div id="payment-modal" class="modal-overlay hidden">
+        <div class="modal-content">
+            <button id="close-modal-btn" class="modal-close-btn">&times;</button>
+            
+            <!-- Lépésjelző indicators -->
+            <div class="modal-steps">
+                <div class="step-dot active" id="dot-1">1</div>
+                <div class="step-line"></div>
+                <div class="step-dot" id="dot-2">2</div>
+                <div class="step-line"></div>
+                <div class="step-dot" id="dot-3">3</div>
+            </div>
+
+            <!-- 1. LÉPÉS: Vásárló adatai -->
+            <div class="modal-step active" id="step-1">
+                <h3>1. Személyes adatok</h3>
+                <p class="step-desc">A jegyeket e-mailben küldjük el neked.</p>
+                <form id="customer-form">
+                    <div class="form-group">
+                        <label for="cust-name">Teljes név *</label>
+                        <input type="text" id="cust-name" placeholder="Gipsz Jakab" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="cust-email">E-mail cím *</label>
+                        <input type="email" id="cust-email" placeholder="jakab@example.com" required>
+                    </div>
+                    <div class="modal-actions">
+                        <button type="button" id="to-step-2" class="btn-primary">Tovább a fizetéshez</button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- 2. LÉPÉS: Teszt Kártyás Fizetés -->
+            <div class="modal-step" id="step-2">
+                <h3>2. Bankkártyás fizetés (Teszt)</h3>
+                <p class="step-desc">Fizetendő összeg: <strong id="modal-total-price">0 Ft</strong></p>
+                
+                <form id="card-form">
+                    <div class="form-group">
+                        <label for="card-name">Kártyán szereplő név *</label>
+                        <input type="text" id="card-name" placeholder="Gipsz Jakab" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="card-number">Kártyaszám (Teszt) *</label>
+                        <input type="text" id="card-number" maxlength="19" placeholder="4000 0000 0000 0000" required>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group lejarat-cvc">
+                            <label for="card-exp">Lejárat *</label>
+                            <input type="text" id="card-exp" maxlength="5" placeholder="MM/YY" required>
+                        </div>
+                        <div class="form-group lejarat-cvc">
+                            <label for="card-cvc">CVC/CVV *</label>
+                            <input type="text" id="card-cvc" maxlength="3" placeholder="123" required>
+                        </div>
+                    </div>
+                    <div class="modal-actions">
+                        <button type="button" id="back-to-step-1" class="btn-secondary">Vissza</button>
+                        <button type="button" id="process-payment-btn" class="btn-primary">Fizetés indítása</button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- 3. LÉPÉS: Sikeres fizetés -->
+            <div class="modal-step" id="step-3">
+                <div class="success-icon">✓</div>
+                <h3>Sikeres fizetés!</h3>
+                <p>Köszönjük a vásárlást! A jegyeket elküldtük a megadott e-mail címre (<strong id="confirm-email"></strong>).</p>
+                <div class="modal-actions centered">
+                    <button type="button" id="finish-btn" class="btn-primary">Rendben</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script src="../js/menu.js"></script>
     <script src="../js/programok.js"></script>
     <script src="../js/jegyvasarlas.js"></script>

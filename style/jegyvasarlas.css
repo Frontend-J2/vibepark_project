@@ -156,6 +156,194 @@ select {
     background: white;
 }
 
+/* MODAL HÁTTÉR ÉS KONTÉNER */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.75);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    backdrop-filter: blur(4px);
+}
+
+.modal-overlay.hidden {
+    display: none;
+}
+
+.modal-content {
+    background: #1a1a24;
+    color: #fff;
+    width: 90%;
+    max-width: 480px;
+    padding: 30px;
+    border-radius: 12px;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    border: 1px solid #333;
+}
+
+.modal-close-btn {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    background: none;
+    border: none;
+    color: #aaa;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+.modal-close-btn:hover {
+    color: #ff3f98;
+}
+
+/* LÉPÉSJELZŐK */
+.modal-steps {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 25px;
+}
+
+.step-dot {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: #333;
+    color: #aaa;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.step-dot.active {
+    background: #ff3f98;
+    color: #fff;
+}
+
+.step-line {
+    width: 40px;
+    height: 2px;
+    background: #333;
+}
+
+/* LÉPÉSEK TARTALMA */
+.modal-step {
+    display: none;
+}
+
+.modal-step.active {
+    display: block;
+}
+
+.modal-step h3 {
+    margin-top: 0;
+    color: #34c8e8;
+}
+
+.step-desc {
+    color: #ccc;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+/* ŰRLAP MEZŐK */
+.form-group {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-size: 13px;
+    margin-bottom: 5px;
+    color: #bbb;
+}
+
+.form-group input {
+    padding: 10px 12px;
+    border-radius: 6px;
+    border: 1px solid #444;
+    background: #252533;
+    color: #fff;
+    font-size: 14px;
+    outline: none;
+}
+
+.form-group input:focus {
+    border-color: #34c8e8;
+}
+
+.form-row {
+    display: flex;
+    gap: 15px;
+}
+
+.form-row .form-group {
+    flex: 1;
+}
+
+/* GOMBOK */
+.modal-actions {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 25px;
+}
+
+.modal-actions.centered {
+    justify-content: center;
+}
+
+.btn-primary {
+    background: linear-gradient(45deg, #ff3f98, #34c8e8);
+    border: none;
+    color: #fff;
+    padding: 12px 20px;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    flex: 1;
+}
+
+.btn-secondary {
+    background: #333;
+    border: none;
+    color: #fff;
+    padding: 12px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.btn-primary:hover, .btn-secondary:hover {
+    opacity: 0.9;
+}
+
+/* SIKERES MODAL KÉP */
+.success-icon {
+    width: 60px;
+    height: 60px;
+    background: #28a745;
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    margin: 0 auto 15px auto;
+}
+
+.lejarat-cvc{
+    width: 100px;
+}
+
 @media (max-width: 900px) {
     .ticket-page {
         grid-template-columns: 1fr;
