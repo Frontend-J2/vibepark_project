@@ -67,11 +67,22 @@ td, th{
     background-color: var(--primary-color);
     color: var(--text-color);
 }
-.questions-szulo{
-    height: 150px;
-    width: 500px;
-    background-color: var(--bg-color);
+.q-modal{
+    bottom: 0px;
+    left: 105px;
+    right: 50px;
+    position: absolute;
+    border: 2px solid rgba(216, 9, 76);
+    background: rgba(232, 232, 147);
+    opacity: 0.5;
+}
+
+.faq{
+    position: relative;
 }
 .kerdes{
     cursor: pointer;
+}
+.kerdes:hover{
+    color: #ff6b45;
 }

@@ -119,3 +119,30 @@ const programs = [
         ]
     }
 ];
+
+const koncert = document.querySelectorAll(".koncert")
+const info = document.querySelectorAll(".koncertInfo")
+const adatok = document.querySelectorAll(".adatok")
+const coming = document.getElementById("showMoreBtn")
+const morekoncert = document.querySelector("#moreKoncert")
+
+info.forEach(function(gomb){
+    gomb.addEventListener("click", function(){
+        const koncert = gomb.closest(".koncert");
+        const adatok = koncert.querySelector(".adatok");
+
+        adatok.hidden = !adatok.hidden;
+    });
+});
+
+coming.addEventListener("click", function(){
+    morekoncert.hidden = !morekoncert.hidden
+    
+    if(!morekoncert.hidden){
+    coming.innerText = "Kevesebb program";
+}else {
+    coming.innerText = "Coming soon..."
+}
+    
+});
+

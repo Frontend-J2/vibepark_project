@@ -1,0 +1,196 @@
+/* ==========================================
+   RÓLUNK OLDAL STÍLUSAI
+   ========================================== */
+
+.about-container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+    color: #fff;
+}
+
+/* CÍMSOR */
+.about-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.about-header h1 {
+    font-size: 2.8rem;
+    color: #ff3f98;
+    margin-bottom: 10px;
+}
+
+.about-header .subtitle {
+    font-size: 1.2rem;
+    color: #34c8e8;
+    font-weight: 300;
+}
+
+/* SZTORI SZEKCIÓ (Kép + Szöveg egymás mellett) */
+.story-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+    background: #16161f;
+    padding: 30px;
+    border-radius: 16px;
+    border: 1px solid #282838;
+    margin-bottom: 40px;
+}
+
+.story-image-container {
+    width: 100%;
+    height: 100%;
+    min-height: 300px;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.story-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 12px;
+    transition: transform 0.4s ease;
+}
+
+.story-image-container:hover .story-image {
+    transform: scale(1.03);
+}
+
+.story-text h2 {
+    color: #34c8e8;
+    font-size: 1.8rem;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.story-text p {
+    color: #ccc;
+    line-height: 1.7;
+    font-size: 1rem;
+    margin-bottom: 15px;
+}
+
+/* KÁRTYÁK / STATISZTIKÁK */
+.stats-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.stat-card {
+    background: #1a1a24;
+    border: 1px solid #333;
+    border-radius: 12px;
+    padding: 25px;
+    text-align: center;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+    border-color: #ff3f98;
+}
+
+.stat-number {
+    display: block;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #ff3f98;
+}
+
+.stat-icon {
+    display: block;
+    font-size: 2.5rem;
+    margin-bottom: 5px;
+}
+
+.stat-label {
+    color: #ddd;
+    font-size: 1rem;
+    margin-top: 5px;
+}
+
+/* RÉSZLETES BLOKKOK */
+.about-details {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    margin-bottom: 40px;
+}
+
+.detail-block {
+    background: #16161f;
+    padding: 25px;
+    border-radius: 12px;
+    border-left: 4px solid #ff3f98;
+}
+
+.detail-block h3 {
+    color: #fff;
+    margin-top: 0;
+    margin-bottom: 12px;
+}
+
+.detail-block p {
+    color: #bbb;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* HÁZIREND KÁRTYA & LETÖLTÉS */
+.house-rules-card {
+    background: linear-gradient(135deg, #1f1b2e, #16161f);
+    border: 1px solid #34c8e8;
+    border-radius: 16px;
+    padding: 35px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.rules-content h2 {
+    color: #ff3f98;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.rules-content p {
+    color: #ccc;
+    max-width: 600px;
+    margin: 0 auto 25px auto;
+}
+
+.download-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: linear-gradient(45deg, #ff3f98, #ff9d2f);
+    color: #fff;
+    text-decoration: none;
+    padding: 14px 28px;
+    font-weight: bold;
+    border-radius: 30px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.download-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 20px rgba(255, 63, 152, 0.4);
+}
+
+/* RESZPONSZÍV TÖRÉSPONTOK */
+@media (max-width: 850px) {
+    .story-grid,
+    .about-details {
+        grid-template-columns: 1fr;
+    }
+    
+    .story-image-container {
+        height: 250px;
+    }
+}
