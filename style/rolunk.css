@@ -147,7 +147,6 @@
 /* HÁZIREND KÁRTYA & LETÖLTÉS */
 .house-rules-card {
     background: linear-gradient(135deg, #1f1b2e, #16161f);
-    border: 1px solid #34c8e8;
     border-radius: 16px;
     padding: 35px;
     text-align: center;
