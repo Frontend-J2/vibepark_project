@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vibe Park Szabadtéri és Klubhelyszín</title>
+    <title>Kapcsolat - Vibe Park Szabadtéri és Klubhelyszín</title>
     <link rel="stylesheet" href="../style/main.css">
     <link rel="stylesheet" href="../style/menu.css">
     <link rel="stylesheet" href="../style/kapcsolat.css">
 </head>
 <body>
     <nav class="nav">    
-        <a class="navbar-brand" href="#top">
+        <a class="navbar-brand" href="../index.html">
             <p style="color: #ff3f98; padding-right: 8px; font-weight: bold;">Vibe</p>
             <p style="color: #34c8e8; padding-right: 8px; font-weight: bold;">Park</p>| Budapest
         </a>
@@ -20,7 +20,7 @@
         <ul class="nav-list hidden-nav-list">
             <li class="nav-item hidden-nav-item">
                 <div class="img"></div>
-                <a class="nav-link" aria-current="page" href="../index.html">Kezdő oldal</a>
+                <a class="nav-link" href="../index.html">Kezdő oldal</a>
             </li>
             <li class="nav-item hidden-nav-item">
                 <div class="img"></div>
@@ -46,46 +46,87 @@
         </ul>
     </nav>
 
+    <main class="contact-container">
+        <!-- Címsor -->
+        <section class="contact-header">
+            <h1>Lépj kapcsolatba velünk!</h1>
+            <p>Kérdésed van a jegyekkel vagy a helyszínnel kapcsolatban? Írj nekünk! 😉</p>
+        </section>
 
-    <div class="helyszin">
-        <h3>Fesztivál helyszín</h3>
-        <iframe class="terkep nagy-terkep" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10772.68925155825!2d18.98769287156676!3d47.544974971246354!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4741d92120f5c5ad%3A0xe27c87fc4236e268!2zQnVkYXBlc3QsIFN6w6lwdsO2bGd5!5e0!3m2!1shu!2shu!4v1784877838202!5m2!1shu!2shu" width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
-        <iframe class="terkep kozepes-terkep" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10772.68925155825!2d18.98769287156676!3d47.544974971246354!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4741d92120f5c5ad%3A0xe27c87fc4236e268!2zQnVkYXBlc3QsIFN6w6lwdsO2bGd5!5e0!3m2!1shu!2shu!4v1784877838202!5m2!1shu!2shu" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
-        <iframe class="terkep kicsi-terkep" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10772.68925155825!2d18.98769287156676!3d47.544974971246354!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4741d92120f5c5ad%3A0xe27c87fc4236e268!2zQnVkYXBlc3QsIFN6w6lwdsO2bGd5!5e0!3m2!1shu!2shu!4v1784877838202!5m2!1shu!2shu" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
-    </div>
+        <!-- Elérhetőségek Kártyák -->
+        <section class="info-cards">
+            <div class="info-card">
+                <div class="icon">📍</div>
+                <h3>Helyszín</h3>
+                <p>1037 Budapest, Szépvölgyi út</p>
+            </div>
+            <div class="info-card">
+                <div class="icon">✉️</div>
+                <h3>E-mail</h3>
+                <p><a href="mailto:info@hangar42.hu">info@hangar42.hu</a></p>
+            </div>
+            <div class="info-card">
+                <div class="icon">📞</div>
+                <h3>Telefon</h3>
+                <p><a href="tel:+36123456789">+36 1 234 5678</a></p>
+            </div>
+        </section>
 
-    <table>
-        <tr>
-            <td>Elérhetőségek</td>
-            <td>E-mail cím: info@hangar42.hu</td>
-            <td>Telefonszám: +36123456789</td>
-            
-        </tr>
-    </table>
+        <!-- Űrlap és Térkép Szekció -->
+        <div class="contact-grid">
+            <!-- Kapcsolati űrlap -->
+            <section class="form-section">
+                <h2>Írj nekünk üzenetet</h2>
+                <form id="my-form" class="contact-form" action="https://formspree.io/f/mdarypqr" method="POST">
+                    <div class="form-group">
+                        <label for="name">Neved</label>
+                        <input type="text" id="name" name="Név" placeholder="A te neved" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">E-mail címed</label>
+                        <input type="email" id="email" name="Email" placeholder="email@szolgaltato.hu" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Üzenet</label>
+                        <textarea id="message" name="Üzenet" rows="5" placeholder="Írd ide az üzeneted..." required></textarea>
+                    </div>
+                    <button class="submit-btn" type="submit">Üzenet küldése</button>
+                </form>
+            </section>
 
-    <div>
-         <h2>Megközelítés</h2>
-        <p><!-- Éva! ide AI-al tudsz generálni megközelítésre tippeket--></p>
-    </div>
+            <!-- Reszponzív Térkép -->
+            <section class="map-section">
+                <h2>Fesztivál helyszín</h2>
+                <div class="map-wrapper">
+                    <iframe class="terkep" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10772.68925155825!2d18.98769287156676!3d47.544974971246354!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4741d92120f5c5ad%3A0xe27c87fc4236e268!2zQnVkYXBlc3QsIFN6w6lwdsO2bGd5!5e0!3m2!1shu!2shu!4v1784877838202!5m2!1shu!2shu" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+                </div>
+            </section>
+        </div>
 
+        <!-- Generált Megközelítés Szekció -->
+        <section class="location-guide">
+            <h2>Hogyan jutsz el hozzánk?</h2>
+            <div class="guide-grid">
+                <div class="guide-item">
+                    <h3>🚌 Tömegközlekedéssel</h3>
+                    <p>A Kolosy térről induló <strong>65-ös és 65A buszokkal</strong> alig 10 perc alatt elérhető a helyszín. Éjszaka a <strong>937-es éjszakai járat</strong> közlekedik a Vibe Park közvetlen közelében.</p>
+                </div>
+                <div class="guide-item">
+                    <h3>🚗 Autóval & Taxival</h3>
+                    <p>A belváros felől a Margit hídon át a Szépvölgyi útra kanyarodva egyszerűen megközelíthető. A helyszín saját őrzött parkolóval rendelkezik, valamint kiemelt Taxi droszt működik a bejáratnál.</p>
+                </div>
+                <div class="guide-item">
+                    <h3>🚴 Kerékpárral / Rollerrel</h3>
+                    <p>Kiépített kerékpárút vezet a Szépvölgyi úton. A főbejárat mellett ingyenes, kamerával megfigyelt kerékpártároló és e-roller lerakó pont található.</p>
+                </div>
+            </div>
+        </section>
+    </main>
 
-    <section id="kapcsolat">
-        <h1>Kapcsolat</h1>
-        <p>Kérdésed van?! Írj nekünk! 😉 </p>
-
-        <form id="my-form" class="contact-form" action="https://formspree.io/f/mdarypqr" method="POST">
-            <input type="text" name="Név" placeholder="A te neved" required>
-            <input type="email" name="Email" placeholder="E-mail címed" required>
-            <textarea name="Üzenet" rows="6" placeholder="Írd ide az üzeneted..." required></textarea>
-            <button class="massege"  type="submit">Üzenet küldése</button>
-        </form>
-    </section>
-
-   
     <footer>
-        <p> &copy; Vibe Park - Ott a helyed!  </p>
+        <p> &copy; Vibe Park - Ott a helyed! </p>
     </footer>
+
     <script src="../js/menu.js"></script>
 </body>
-
 </html>
