@@ -1,9 +1,11 @@
 .koncert-list {
     margin-top: 4rem;
-    padding: 1rem;
+    padding: 40px;
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    background-color: var(--surface-color);
+    border-radius: 15px;
+    
 }
 
 @media (min-width: 768px){
@@ -19,28 +21,42 @@
     gap: 10px;
     padding: 20px;
     border-radius: 10px;
-    color: wheat;
-    background-color: var(--background);
+    color: var(--title-color);
+    background-color:  #1a1a24;
+   border: 1px solid rgba(255, 255, 255, .08);
+   margin-bottom: 1px;
+}
+
+.koncert:hover {
+    transform: translateX(5px);
+    border-color: var(--text-color);
 }
 
 h3 {
     color: var(--text-color);
+    margin-bottom: 10px;
 }
 
 #showMoreBtn {
     cursor: pointer;
+    justify-content: center;
+    display: flex;
+    
 }
 
-.koncertInfo {
+.koncertInfo,  .ticket, .ticket-error{
     cursor: pointer;
 }
+
+
+
 
 .felsoSor{
 
     display:flex;
 
     justify-content:space-between;
-
+    
     align-items:center;
 }
 
@@ -49,4 +65,23 @@ h3 {
     display:flex;
 
     gap:10px;
+}
+.adatok{
+    margin-top:15px;
+    padding-top:15px;
+
+    border-top:1px solid rgba(255,255,255,.08);
+
+    color:#cfcfcf;
+
+    line-height:1.6;
+}
+
+.moreKoncert {
+    gap: 10px;
+}
+
+.ticket-nem {
+    display: flex;
+    cursor: pointer;
 }
