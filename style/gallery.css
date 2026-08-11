@@ -1,5 +1,9 @@
 /*Főoldal galéria*/
 
+html, body {
+    overflow-x: hidden;
+}
+
 .hex-gallery {
     --cell-size: 220px;
     --column-gap: 95px;
@@ -10,25 +14,24 @@
 .hex-grid {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    min-width: max-content;
+    align-items: flex-start;
+    width: fit-content;
+    margin: 0 auto;
+    
 }
 
 .hex-grid-row,
 .hex-grid-row-offset {
     display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: var(--cell-size);
     column-gap: var(--column-gap);
     margin-top: var(--row-offset);
 }
 
-.hex-grid-row {
-    grid-template-columns: repeat(4, var(--cell-size));
-}
-
 .hex-grid-row-offset {
-    grid-template-columns: repeat(3, var(--cell-size));
+    margin-left: calc((var(--cell-size) + var(--column-gap)) / 2);
 }
-
 
 .hex {
     width: var(--cell-size);
@@ -39,6 +42,7 @@
     border-radius: 10px;
     position: relative;
     transition: transform .3s ease;
+    box-sizing: border-box;
 }
 
 .hex:hover {
@@ -56,29 +60,76 @@
     transform: translate(-50%, -50%) rotate(-45deg);
 }
 
-@media (max-width: 992px) {
-    .hex-gallery {
-        --cell-size: 180px;
-        --column-gap: 70px;
-        --row-offset: -40px;
-    }
+.gallery-big {
+    display: block;
 }
 
-@media (max-width: 768px) {
-    .hex-gallery {
-        --cell-size: 140px;
-        --column-gap: 50px;
-        --row-offset: -30px;
-    }
-    .hex-gallery {
-        overflow-x: auto;
-        overflow-y: hidden;
-        max-width: 768px;
-        width: 100%;
-        scrollbar-width: none;
-        padding: 80px 40px;
-        box-sizing: border-box;
-    }
+.gallery-medium {
+    display: none;
+}
+
+.gallery-small {
+    display: none;
+}
+
+.gallery-xs {
+    display: none;
+}
+
+.gallery-mini {
+    display: none;
+}
+
+@media (max-width: 1280px) {
+.gallery-big,
+.gallery-small,
+.gallery-xs,
+.gallery-mini {
+    display: none;
+}
+
+.gallery-medium {
+    display: block;
+}
+}
+
+@media (max-width: 950px) {
+.gallery-big,
+.gallery-medium,
+.gallery-xs,
+.gallery-mini {
+    display: none;
+}
+
+.gallery-small {
+    display: block;
+}
+}
+
+@media (max-width: 770px){
+.gallery-big,
+.gallery-medium,
+.gallery-small,
+.gallery-mini {
+    display: none;
+}
+
+.gallery-xs {
+    display: block;
+}
+}
+
+@media (max-width: 630px) {
+.gallery-big,
+.gallery-medium,
+.gallery-xs,
+.gallery-small {
+    display: none;
+}
+
+.gallery-mini {
+    display: block;
+}
 }
 
 /*Galéria lap*/

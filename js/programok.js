@@ -2,7 +2,7 @@ const programs = [
     {
         id: 1,
         name: "Neon Beats Live Dj Nórival",
-        date: "2026. MÁJUS 15.",
+        date: "2026. SZEPTEMBER 8.",
         time: "20:00",
         place: "Vibe Park Budapest",
         image: "img/koncertek/belteri.png",
@@ -24,7 +24,7 @@ const programs = [
     {
         id: 2,
         name: "Dübörgő Éjszakák",
-        date: "2026. JÚNIUS 02.",
+        date: "2026. SZEPTEMBER 22.",
         time: "21:00",
         place: "Vibe Park Budapest",
         image: "img/koncertek/elozene.png",
@@ -45,8 +45,8 @@ const programs = [
 
     {
         id: 3,
-        name: "Summer Fest 2026",
-        date: "2026. JÚLIUS 20.",
+        name: "Outumn Fest 2026",
+        date: "2026. SZEPTEMBER 30.",
         time: "18:00",
         place: "Vibe Park Budapest",
         image: "img/koncertek/este.png",
@@ -77,8 +77,8 @@ const programs = [
 
     {
         id: 4,
-        name: "Summer Fest 2026 - Szabadtéri",
-        date: "2026. JÚLIUS 20.",
+        name: "Chill Fest 2026 - Szabadtéri",
+        date: "2026. OKTÓBER 20.",
         time: "16:00",
         place: "Vibe Park Budapest",
         image: "img/koncertek/szabadter.png",
@@ -100,7 +100,7 @@ const programs = [
     {
         id: 5,
         name: "Neon Beats Live Dj Zsoltival",
-        date: "2026. AUGUSZTUS 15.",
+        date: "2026. NOVEMBER 15.",
         time: "20:00",
         place: "Vibe Park Budapest",
         image: "img/koncertek/belteri2.png",
@@ -117,6 +117,28 @@ const programs = [
                 price: 4500
             }
         ]
+    },
+
+    {
+        id: 6,
+        name: "Midnight Echo",
+        date: "2026. SZEPTEMBER 05.",
+        time: "23:00",
+        place: "Vibe Park Budapest",
+        image: "img/koncertek/belteri2.png",
+        days: 1,
+        tickets: [
+            {
+                id: "full",
+                name: "Teljes árú",
+                price: 9990
+            },
+            {
+                id: "discount",
+                name: "Kedvezményes",
+                price: 4500
+            }
+        ]
     }
 ];
 
@@ -125,6 +147,9 @@ const info = document.querySelectorAll(".koncertInfo")
 const adatok = document.querySelectorAll(".adatok")
 const coming = document.getElementById("showMoreBtn")
 const morekoncert = document.querySelector("#moreKoncert")
+const error = document.querySelector(".ticket-error")
+const ticket = document.querySelectorAll(".ticket")
+const nemelerheto = document.querySelectorAll(".ticket-nem")
 
 info.forEach(function(gomb){
     gomb.addEventListener("click", function(){
@@ -146,3 +171,22 @@ coming.addEventListener("click", function(){
     
 });
 
+error.addEventListener("click", function(){
+    window.location.href = "../404.html";
+});
+
+ticket.forEach(function(gomb){
+    gomb.addEventListener("click", function(){
+        window.location.href = "jegyvasarlas.html";
+    });
+});
+
+nemelerheto.forEach(function (gomb){
+    gomb.addEventListener("click", function(){
+        if(gomb.innerText === "Jegyvásárlás"){
+            gomb.innerText = "Nem elérhető!";
+        }else {
+            gomb.innerText = "Jegyvásárlás"
+        }
+    });
+});

@@ -86,3 +86,7 @@ td, th{
 .kerdes:hover{
     color: #ff6b45;
 }
+
+footer p{
+    color: var(--text-color);
+}
