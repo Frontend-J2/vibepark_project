@@ -44,9 +44,9 @@
 .nav-list{
     width: 75%;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     flex-direction: row;
-    gap: 1.5rem;
+    gap: 3rem;
     padding: 1rem 2rem;
     }
 .nav-item{
@@ -114,6 +114,7 @@
         flex-direction: column;
         position: absolute;
         width: 230px;
+        gap: 1rem;
         border-radius: 16px;
         background-color: rgba(0, 0, 0, 0.03);
         backdrop-filter: blur(10px);
