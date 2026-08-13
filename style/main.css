@@ -13,7 +13,8 @@
     --text-hover: #0f0800; /*hover/active szöveg szín*/
     --title-color: #ff6b45; /*cím szín*/
     --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /*betűtipus*/
-    --background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+    /*--background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);*/
+    --background: #302b63;
 }
 
 body {

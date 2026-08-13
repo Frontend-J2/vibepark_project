@@ -5,6 +5,7 @@ html, body {
 }
 
 .hex-gallery {
+    background: #2c2727;
     --cell-size: 220px;
     --column-gap: 95px;
     --row-offset: -50px;
