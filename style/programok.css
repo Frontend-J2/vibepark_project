@@ -1,11 +1,12 @@
 .koncert-list {
     margin-top: 4rem;
     padding: 40px;
+    margin: 40px auto;
     display: flex;
     flex-direction: column;
-    background-color: var(--surface-color);
+    align-items: center;
     border-radius: 15px;
-    
+    max-width: 850px;
 }
 
 @media (min-width: 768px){
@@ -20,7 +21,7 @@
     flex-direction: column;
     gap: 10px;
     padding: 20px;
-    border-radius: 10px;
+    border-radius: 12px;
     color: var(--title-color);
     background-color:  #1a1a24;
    border: 1px solid rgba(255, 255, 255, .08);
@@ -41,7 +42,8 @@ h3 {
     cursor: pointer;
     justify-content: center;
     display: flex;
-    
+    margin-bottom: 5px;
+    margin-top: 5px;
 }
 
 .koncertInfo,  .ticket, .ticket-error{
@@ -77,8 +79,10 @@ h3 {
     line-height:1.6;
 }
 
-.moreKoncert {
-    gap: 10px;
+#moreKoncert {
+    
+    width: 100%;
+    
 }
 
 .ticket-nem {
