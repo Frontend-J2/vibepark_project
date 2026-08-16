@@ -95,13 +95,16 @@
                 <h3>1. Személyes adatok</h3>
                 <p class="step-desc">A jegyeket e-mailben küldjük el neked.</p>
                 <form id="customer-form">
-                    <div class="form-group">
+                    <div class="form-group" id="group-cust-name">
                         <label for="cust-name">Teljes név *</label>
-                        <input type="text" id="cust-name" placeholder="Gipsz Jakab" required>
+                        <input type="text" id="cust-name" placeholder="Kovács János">
+                        <span class="error-text">Kérjük, add meg a teljes nevedet!</span>
                     </div>
-                    <div class="form-group">
+
+                    <div class="form-group" id="group-cust-email">
                         <label for="cust-email">E-mail cím *</label>
-                        <input type="email" id="cust-email" placeholder="jakab@example.com" required>
+                        <input type="email" id="cust-email" placeholder="jakab@example.com">
+                        <span class="error-text">Érvénytelen e-mail cím!</span>
                     </div>
                     <div class="modal-actions">
                         <button type="button" id="to-step-2" class="btn-primary">Tovább a fizetéshez</button>
@@ -115,22 +118,28 @@
                 <p class="step-desc">Fizetendő összeg: <strong id="modal-total-price">0 Ft</strong></p>
                 
                 <form id="card-form">
-                    <div class="form-group">
+                    <div class="form-group" id="group-card-name">
                         <label for="card-name">Kártyán szereplő név *</label>
-                        <input type="text" id="card-name" placeholder="Gipsz Jakab" required>
+                        <input type="text" id="card-name" placeholder="Gipsz Jakab">
+                        <span class="error-text">Adja meg a kártyán szereplő teljes nevet!</span>
                     </div>
-                    <div class="form-group">
-                        <label for="card-number">Kártyaszám (Teszt) *</label>
-                        <input type="text" id="card-number" maxlength="19" placeholder="4000 0000 0000 0000" required>
+
+                    <div class="form-group" id="group-card-number">
+                        <label for="card-number">Kártyaszám *</label>
+                        <input type="text" id="card-number" placeholder="4000 0000 0000 0000" maxlength="19">
+                        <span class="error-text">A kártyaszám 16 számjegy!</span>
                     </div>
+
                     <div class="form-row">
-                        <div class="form-group lejarat-cvc">
+                        <div class="form-group lejarat-cvc" id="group-card-exp">
                             <label for="card-exp">Lejárat *</label>
-                            <input type="text" id="card-exp" maxlength="5" placeholder="MM/YY" required>
+                            <input type="text" id="card-exp" placeholder="MM/YY" maxlength="5">
+                            <span class="error-text">Érvénytelen/lejárt!</span>
                         </div>
-                        <div class="form-group lejarat-cvc">
+                        <div class="form-group lejarat-cvc" id="group-card-cvc">
                             <label for="card-cvc">CVC/CVV *</label>
-                            <input type="text" id="card-cvc" maxlength="3" placeholder="123" required>
+                            <input type="text" id="card-cvc" placeholder="123" maxlength="3">
+                            <span class="error-text">3 számjegy!</span>
                         </div>
                     </div>
                     <div class="modal-actions">

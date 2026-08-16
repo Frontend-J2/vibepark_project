@@ -134,7 +134,7 @@ body {
     height: 55px;
     border: none;
     border-radius: 10px;
-    background: #4f7cff;
+    background: linear-gradient(45deg, #ff3f98, #34c8e8);
     color: white;
     font-size: 1rem;
     font-weight: bold;
@@ -143,7 +143,7 @@ body {
 }
 
 #pay-btn:hover {
-    background: #3b66e8;
+    opacity: 0.9;
 }
 
 select {
@@ -342,6 +342,24 @@ select {
 
 .lejarat-cvc{
     width: 100px;
+}
+
+/* HIBÁS MEZŐ STÍLUSA */
+.form-group input.error {
+    border-color: #ff4d4d !important;
+    background-color: rgba(255, 77, 77, 0.1);
+}
+
+/* HIBAÜZENET SZÖVEGE */
+.error-text {
+    color: #ff4d4d;
+    font-size: 11px;
+    margin-top: 4px;
+    display: none;
+}
+
+.form-group.has-error .error-text {
+    display: block;
 }
 
 @media (max-width: 900px) {

@@ -127,15 +127,73 @@ eventSelect.addEventListener("change", () => {
 loadProgram(eventSelect.value || (programs.length > 0 ? programs[0].id : 1));
 
 // ==========================================
+// VALIDÁCIÓS FÜGGVÉNYEK
+// ==========================================
+const validators = {
+    name: (val) => {
+        const regex = /^[A-Za-zÁÉÍÓÖŐÚÜŰáéíóöőúüű]{2,}(\s+[A-Za-zÁÉÍÓÖŐÚÜŰáéíóöőúüű]{2,})+$/;
+        return regex.test(val.trim());
+    },
+    email: (val) => {
+        const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return regex.test(val.trim());
+    },
+    cardNumber: (val) => {
+        const cleanVal = val.replace(/\s+/g, '');
+        return /^\d{16}$/.test(cleanVal);
+    },
+    cardExp: (val) => {
+        const regex = /^(0[1-9]|1[0-2])\/(\d{2})$/;
+        const match = val.match(regex);
+        if (!match) return false;
+
+        const month = parseInt(match[1], 10);
+        const year = parseInt("20" + match[2], 10);
+
+        const now = new Date();
+        const currentYear = now.getFullYear();
+        const currentMonth = now.getMonth() + 1;
+
+        if (year < currentYear) return false;
+        if (year === currentYear && month < currentMonth) return false;
+
+        return true;
+    },
+    cardCvc: (val) => {
+        return /^\d{3}$/.test(val.trim());
+    }
+};
+
+// Segédfüggvény a mezők vizuális ellenőrzésére
+function validateField(inputId, isValid) {
+    const input = document.getElementById(inputId);
+    const parentGroup = input.closest('.form-group');
+
+    if (!isValid) {
+        input.classList.add("error");
+        if (parentGroup) parentGroup.classList.add("has-error");
+    } else {
+        input.classList.remove("error");
+        if (parentGroup) parentGroup.classList.remove("has-error");
+    }
+
+    // Ha elkezd gépelni, tüntessük el a piros hibát
+    input.addEventListener("input", () => {
+        input.classList.remove("error");
+        if (parentGroup) parentGroup.classList.remove("has-error");
+    }, { once: true });
+
+    return isValid;
+}
+
+// ==========================================
 // FIZETÉSI MODAL LOGIKA
 // ==========================================
 
 function goToStep(stepNumber) {
-    // Lépések elrejtése/megjelenítése
     document.querySelectorAll(".modal-step").forEach(step => step.classList.remove("active"));
     document.getElementById(`step-${stepNumber}`).classList.add("active");
 
-    // Lépésjelző pöttyök frissítése
     document.querySelectorAll(".step-dot").forEach((dot, idx) => {
         if (idx + 1 <= stepNumber) {
             dot.classList.add("active");
@@ -163,13 +221,16 @@ function closeModal() {
 
 closeModalBtn.addEventListener("click", closeModal);
 
-// 1. Lépésről -> 2. Lépésre
+// 1. LÉPÉSRŐL -> 2. LÉPÉSRE (Piros kijelöléssel)
 toStep2Btn.addEventListener("click", () => {
     const nameInput = document.getElementById("cust-name");
     const emailInput = document.getElementById("cust-email");
 
-    if (!nameInput.value.trim() || !emailInput.value.trim()) {
-        alert("Kérjük, töltsd ki a nevedet és az e-mail címedet!");
+    const isNameValid = validateField("cust-name", validators.name(nameInput.value));
+    const isEmailValid = validateField("cust-email", validators.email(emailInput.value));
+
+    // Ha bármelyik hibás, elakad a folyamat
+    if (!isNameValid || !isEmailValid) {
         return;
     }
 
@@ -181,15 +242,19 @@ backToStep1Btn.addEventListener("click", () => {
     goToStep(1);
 });
 
-// Szimulált fizetés indítása (2. Lépés -> 3. Lépés)
+// 2. LÉPÉSRŐL -> 3. LÉPÉSRE (Piros kijelöléssel)
 processPaymentBtn.addEventListener("click", () => {
-    const cardName = document.getElementById("card-name").value;
-    const cardNumber = document.getElementById("card-number").value;
-    const cardExp = document.getElementById("card-exp").value;
-    const cardCvc = document.getElementById("card-cvc").value;
+    const cardName = document.getElementById("card-name");
+    const cardNumber = document.getElementById("card-number");
+    const cardExp = document.getElementById("card-exp");
+    const cardCvc = document.getElementById("card-cvc");
 
-    if (!cardName || !cardNumber || !cardExp || !cardCvc) {
-        alert("Kérjük, töltsd ki az összes kártyaadatot!");
+    const isCardNameValid = validateField("card-name", validators.name(cardName.value));
+    const isCardNumValid = validateField("card-number", validators.cardNumber(cardNumber.value));
+    const isCardExpValid = validateField("card-exp", validators.cardExp(cardExp.value));
+    const isCardCvcValid = validateField("card-cvc", validators.cardCvc(cardCvc.value));
+
+    if (!isCardNameValid || !isCardNumValid || !isCardExpValid || !isCardCvcValid) {
         return;
     }
 
@@ -205,12 +270,28 @@ processPaymentBtn.addEventListener("click", () => {
         processPaymentBtn.disabled = false;
 
         goToStep(3);
-    }, 1500); // 1.5 másodperc várakozási idő a valósághűségért
+    }, 1500);
 });
 
-// Befejezés gomb (reseteli és bezárja a folyamatot)
+// Befejezés gomb
 finishBtn.addEventListener("click", () => {
     closeModal();
-    // Visszaállítjuk a jegyszámokat 0-ra
     loadProgram(eventSelect.value);
+});
+
+// Automatikus input formázások gépelés közben
+document.getElementById("card-number").addEventListener("input", (e) => {
+    let value = e.target.value.replace(/\D/g, '');
+    value = value.substring(0, 16);
+    let formatted = value.match(/.{1,4}/g)?.join(' ') || '';
+    e.target.value = formatted;
+});
+
+document.getElementById("card-exp").addEventListener("input", (e) => {
+    let value = e.target.value.replace(/\D/g, '');
+    if (value.length >= 2) {
+        e.target.value = value.substring(0, 2) + '/' + value.substring(2, 4);
+    } else {
+        e.target.value = value;
+    }
 });
