@@ -1,9 +1,12 @@
 const navList = document.querySelector('.nav-list');
 const navItem = document.querySelectorAll('.nav-item');
+const hamblines = document.querySelectorAll('.hambicon-line');
 
 function hambOn(){
     navList.classList.toggle("hidden-nav-list");
-
+    hamblines.forEach((line) => {
+        line.classList.toggle("kapcsolt");
+    });
     navItem.forEach((element, index) => {
         setTimeout(() => {
             element.classList.toggle("hidden-nav-item");
