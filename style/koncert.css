@@ -74,7 +74,7 @@
 
 .leiras {
     font-size: 0.95rem;
-    color: #57606f;
+    color: var(--muted-text);
     line-height: 1.5;
     margin-bottom: 20px;
     flex-grow: 1; /* Alulra tolja a gombot, ha eltérő a szöveghossz */

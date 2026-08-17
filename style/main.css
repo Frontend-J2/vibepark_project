@@ -10,6 +10,7 @@
     --surface-color: #34c8e8; /*kártyák háttere*/
     --primary-color: #ff3f98; /*elsődleges szín*/
     --text-color: #ffd43b; /*szöveg színe*/
+    --muted-text: #57606f;
     --text-hover: #0f0800; /*hover/active szöveg szín*/
     --title-color: #ff6b45; /*cím szín*/
     --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /*betűtipus*/
@@ -64,30 +65,58 @@ td, th{
 
 /*gyakori kérdések*/
 .q-btn{
+    border: none;
+    width: fit-content;
+    margin: 1rem auto;
     cursor: pointer;
-    background-color: var(--primary-color);
-    color: var(--text-color);
+    display: inline-block;
+    text-align: center;
+    background-color: #ff4757;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 12px 20px;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: background-color 0.2s ease;
+}
+.q-btn:hover{
+    background-color: #e84118;
 }
 .q-modal{
-    bottom: 0px;
-    left: 105px;
-    right: 50px;
-    position: absolute;
-    border: 2px solid rgba(216, 9, 76);
-    background: rgba(232, 232, 147);
-    opacity: 0.5;
+    width: 800px;
+    text-align: center;
+    margin: auto;
+    padding: 1rem;
+    background: #2c2727;
+    border-radius: 6px;
 }
 
 .faq{
     position: relative;
+    max-width: 1200px;
+    margin: auto;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.questions-szulo{
+    display: flex;
+    flex-direction: column;
+    gap: .8rem;
 }
 .kerdes{
     cursor: pointer;
+    color: var(--title-color);
 }
 .kerdes:hover{
     color: #ff6b45;
+    transform: scale(1.02);
 }
-
+.valasz{
+    color: var(--muted-text);
+    margin-top: .5rem;
+}
 footer p{
     color: var(--text-color);
 }
