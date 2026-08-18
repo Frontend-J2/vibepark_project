@@ -140,13 +140,12 @@ html, body {
 }
 
 .section-title {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-align: center;
     font-size: 2.5rem;
     padding-bottom: 2rem;
     text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4);
-    color: var(--title-color);
-
+    color: var(--primary-color);
+    font-size: 2.5rem;
 }
 
 .gallery-grid {
@@ -184,11 +183,17 @@ html, body {
 
 .gallery-button img {
     display: block;
-    width: auto;
+    width: 100%;
     height: 280px;
     object-fit: cover;
     border-radius: 4px;
     transition: transform .3s ease;
+}
+
+@media (max-width: 500px) {
+    .gallery-button img {
+        height: 200px;
+    }
 }
 
 .gallery-button:hover img {
