@@ -7,6 +7,7 @@
 /* Fő rács elrendezés */
 .koncertek-grid {
     display: grid;
+    background: #302b63;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 25px;
     padding: 20px;
@@ -17,7 +18,7 @@
 
 /* Egyedi koncert kártya */
 .koncert-kartya {
-    background-color: #ffffff;
+    background-color: #2c2727;
     border-radius: 12px;
     overflow: hidden;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
@@ -73,7 +74,7 @@
 
 .leiras {
     font-size: 0.95rem;
-    color: #57606f;
+    color: var(--muted-text);
     line-height: 1.5;
     margin-bottom: 20px;
     flex-grow: 1; /* Alulra tolja a gombot, ha eltérő a szöveghossz */
@@ -110,8 +111,19 @@
     width: calc(100% + 1.3px);
     height: 60px;
 }
+#first-divider{
+    background: #302b63;
+}
+#second-divider{
+    background: #2c2727;
+}
 
-.custom-shape-divider .shape-fill {
-    /* Az alatta lévő szekció/oldal háttérszíne */
-    fill: #0f0c29; 
+.custom-shape-divider .shape-fill-first {
+    fill: #0f0e0e; 
+}
+.custom-shape-divider .shape-fill-second {
+    fill: #302b63; 
+}
+.custom-shape-divider .shape-fill-third {
+    fill: #2c2727; 
 }

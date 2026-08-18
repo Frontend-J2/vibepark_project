@@ -15,7 +15,11 @@
             <p style="color: #34c8e8; padding-right: 8px; font-weight: bold;">Park</p>| Budapest
         </a>
         <button class="nav-toggler" onclick="hambOn()">
-            <span class="navbar-toggler-icon">&#9776;</span>
+            <div class="navbar-toggler-icon">
+                <div class="hambicon-line hambline1"></div>
+                <div class="hambicon-line hambline2"></div>
+                <div class="hambicon-line hambline3"></div>
+            </div>
         </button>
         <ul class="nav-list hidden-nav-list">
             <li class="nav-item hidden-nav-item">
@@ -39,17 +43,25 @@
                 <div class="img"></div>
                 <a class="nav-link" href="../sites/kapcsolat.html">Kapcsolat</a>
             </li>
-            <li class="nav-item hidden-nav-item">
-                <div class="img"></div>
-                <a class="nav-link" href="../sites/jegyvasarlas.html">Jegyvásárlás</a>
-            </li>
         </ul>
     </nav>
 
 
     <div class="koncert-list">
         <h3>Party is coming!</h3>
-        <div>
+        <div>            
+            <article>
+                <div class="koncert">
+                   <div class="felsoSor">
+                        <span> 2026. Augusztus 8. - Summer Beats Festival|Elektronikus fesztivál - DJszínpad - 14990 Ft </span> 
+                        <div>
+                            <button class="ticket-error" href="../404.html">Jegyvásárlás</button> <button class="koncertInfo">Részletek</button>
+                        </div>
+                  </div>
+                  <p class="adatok" hidden>Egy pezsgő elektronikus zenei fesztivál, ahol a nyári hangulat, a lendületes ütemek és a modern elektronikus zene találkozik. A rendezvény ideális választás azoknak, akik egy felszabadult, energikus közegben szeretnének bulizni, táncolni és együtt átélni a nyár egyik meghatározó zenei élményét.</p>
+                </div>
+            </article>
+
              <article>
                 <div class="koncert"> 
                    <div class="felsoSor">
@@ -64,10 +76,10 @@
 
             <article>
                 <div class="koncert">
-                    <div class="felsoSor">
+                    <div class="felsoSor" >
                         <span> 2026. Szeptember 8. - Neon Beats Live Dj Nórival|Pop koncert - Klubszínpad - 6000 Ft </span> 
                         <div>
-                            <button class="ticket">Jegyvásárlás</button> <button class="koncertInfo">Részletek</button>
+                            <button class="ticket" data-id="1">Jegyvásárlás</button> <button class="koncertInfo">Részletek</button>
                         </div>
                     </div>
                    <p class="adatok" hidden>Neon Dreams | Pop koncert egy energikus élő zenei produkció, amely a legfrissebb popslágerekre és közönségkedvenc dalokra épít.</p>
@@ -81,20 +93,8 @@
                         <div>
                             <button class="ticket">Jegyvásárlás</button> <button class="koncertInfo">Részletek</button>
                         </div>
+                    </div> 
                     <p class="adatok" hidden>Egy lendületes hard rock zenekar, amely erőteljes gitárriffekkel, karakteres énekkel és hamisítatlan rockhangulattal pörgeti fel a közönséget. Műsorukban a klasszikus hard rock életérzés találkozik a modern energiával, így garantált a hangos refrének, a pörgős ritmusok és a felejthetetlen koncertélmény minden rockrajongó számára.</p>
-                  </div>  
-                </div>
-            </article>
-
-            <article>
-                <div class="koncert">
-                   <div class="felsoSor">
-                        <span> 2026. Augusztus 8. - Summer Beats Festival|Elektronikus zenei fesztivál - DJszínpad - 14990 Ft </span> 
-                        <div>
-                            <button class="ticket-error" href="../404.html">Jegyvásárlás</button> <button class="koncertInfo">Részletek</button>
-                        </div>
-                    <p class="adatok" hidden>Egy pezsgő elektronikus zenei fesztivál, ahol a nyári hangulat, a lendületes ütemek és a modern elektronikus zene találkozik. A rendezvény ideális választás azoknak, akik egy felszabadult, energikus közegben szeretnének bulizni, táncolni és együtt átélni a nyár egyik meghatározó zenei élményét.</p>
-                  </div>
                 </div>
             </article>
 
@@ -103,23 +103,10 @@
                    <div class="felsoSor">
                     <span> 2026. Szeptember 22. - Dübörgő Éjszakák| Tuctuc,kekszkeksz - DJszínpad - 6500 Ft </span> 
                         <div>
-                            <button class="ticket">Jegyvásárlás</button> <button class="koncertInfo">Részletek</button>
+                            <button class="ticket" data-id="2">Jegyvásárlás</button> <button class="koncertInfo">Részletek</button>
                         </div>
-                    <p class="adatok" hidden>Készüljetek erre a hatalmas és felejthetetlen bulira ahol a hangerő a maximumon és amit a város sosem fog elfelejteni! LET'S GET PARTY STARTED! </p>
-                  </div>
-                </div>
-            </article>
-
-            <article>
-                <div class="koncert">
-                  <div class="felsoSor">
-                    <span> 2026. Október 2. - Horizont|Alternatív rock - Csillag Színpad - 12000 Ft </span> 
-                        <div>
-                            <button class="ticket">Jegyvásárlás</button> <button class="koncertInfo">Részletek</button>
-                        </div>
-                    <p class="adatok" hidden>Őszinte dallamok, karakteres gitárok és sodró energiák. A Horizont alternatív rockja egyszerre nyers, érzelmes és lendületes azoknak, akik nem csak hallgatni akarják a zenét, hanem érezni is.</p>
-                  </div>  
-                  <p class="adatok" hidden>Phasellus mollis augue non tristique posuere. Fusce interdum sit amet nisl ac elementum.</p>
+                     </div>
+                   <p class="adatok" hidden>Készüljetek erre a hatalmas és felejthetetlen bulira ahol a hangerő a maximumon és amit a város sosem fog elfelejteni! LET'S GET PARTY STARTED! </p>
                 </div>
             </article>
 
@@ -130,11 +117,24 @@
                         <div>
                             <button class="ticket">Jegyvásárlás</button> <button class="koncertInfo">Részletek</button>
                         </div>
-                    <p class="adatok" hidden>Fülbemászó groove-ok, pezsgő ritmusok és ellenállhatatlan popdallamok. A RitmusVáros garantáltan mozgásba hoz: könnyed, energikus és jókedvű zenei élmény, ahol a funk lüktetése találkozik a pop lendületével.</p>
                   </div>
-                   <p class="adatok" hidden>Aenean interdum turpis egestas tortor dapibus, ut eleifend erat condimentum.</p>
+                     <p class="adatok" hidden>Fülbemászó groove-ok, pezsgő ritmusok és ellenállhatatlan popdallamok. A RitmusVáros garantáltan mozgásba hoz: könnyed, energikus és jókedvű zenei élmény, ahol a funk lüktetése találkozik a pop lendületével.</p>
                 </div>
             </article>
+
+            <article>
+                <div class="koncert">
+                  <div class="felsoSor">
+                    <span> 2026. Október 2. - Horizont|Alternatív rock - Csillag Színpad - 12000 Ft </span> 
+                        <div>
+                            <button class="ticket">Jegyvásárlás</button> <button class="koncertInfo">Részletek</button>
+                        </div>
+                  </div>  
+                      <p class="adatok" hidden>Őszinte dallamok, karakteres gitárok és sodró energiák. A Horizont alternatív rockja egyszerre nyers, érzelmes és lendületes azoknak, akik nem csak hallgatni akarják a zenét, hanem érezni is.</p>
+                </div>
+            </article>
+
+            
 
             <article>
                 <div class="koncert">
@@ -143,9 +143,8 @@
                         <div>
                             <button class="ticket">Jegyvásárlás</button> <button class="koncertInfo">Részletek</button>
                         </div>
-                    <p class="adatok" hidden>Neonfények, lüktető szintetizátorok és egy kis éjszakai nosztalgia. Az Éjféli Hullám visszarepít a retró jövőbe, ahol a 80-as évek hangulata találkozik a modern, pulzáló elektronikus energiával.</p>
                   </div>
-                  <p class="adatok" hidden>In a leo ut risus interdum pulvinar non vel odio.</p>
+                       <p class="adatok" hidden>Neonfények, lüktető szintetizátorok és egy kis éjszakai nosztalgia. Az Éjféli Hullám visszarepít a retró jövőbe, ahol a 80-as évek hangulata találkozik a modern, pulzáló elektronikus energiával.</p>
                 </div>
             </article>
 
@@ -156,9 +155,8 @@
                         <div>
                             <button class="ticket">Jegyvásárlás</button> <button class="koncertInfo">Részletek</button>
                         </div>
-                    <p class="adatok" hidden>Tépő basszusok, száguldó breakbeat-ek és megállíthatatlan energia. A Basszus Brigád felrázza a terepet a Drum & Bass legütősebb ritmusaival itt nem nagyon lehet egy helyben maradni.</p>
                   </div>
-                  <p class="adatok" hidden>Fusce ac iaculis purus. Morbi id nibh vitae tellus rutrum bibendum ut ac ligula.</p>
+                    <p class="adatok" hidden>Tépő basszusok, száguldó breakbeat-ek és megállíthatatlan energia. A Basszus Brigád felrázza a terepet a Drum & Bass legütősebb ritmusaival itt nem nagyon lehet egy helyben maradni.</p>
                 </div>
             </article>
 
@@ -169,9 +167,8 @@
                         <div>
                             <button class="ticket" data-id="5">Jegyvásárlás</button> <button class="koncertInfo">Részletek</button>
                         </div>
-                    <p class="adatok" hidden>Pulzáló ütemek, hatalmas dropok és megállíthatatlan energia. Az Elektro Impulzus az EDM legjobb pillanatait hozza: felemel, felpörget, majd berobbantja a táncteret.</p>
                   </div>
-                  <p class="adatok" hidden>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Integer vitae dictum erat.</p>
+                       <p class="adatok" hidden>Pulzáló ütemek, hatalmas dropok és megállíthatatlan energia. Az Elektro Impulzus az EDM legjobb pillanatait hozza: felemel, felpörget, majd berobbantja a táncteret.</p>
                 </div>
             </article>
                 
@@ -182,9 +179,8 @@
                         <div>
                             <button class="ticket">Jegyvásárlás</button> <button class="koncertInfo">Részletek</button>
                         </div>
-                    <p class="adatok" hidden>Dübörgő gitárriffek, nyers energia és kompromisszummentes erő. Az Acélszív a hard rock esszenciája: szenvedély, hangerő és acélkemény lüktetés minden egyes hangban.</p>
                   </div>
-                   <p class="adatok" hidden>Duis blandit leo pellentesque quam semper, vel pretium leo tempor.</p>
+                       <p class="adatok" hidden>Dübörgő gitárriffek, nyers energia és kompromisszummentes erő. Az Acélszív a hard rock esszenciája: szenvedély, hangerő és acélkemény lüktetés minden egyes hangban.</p>
                 </div>
             </article>
 
@@ -195,9 +191,8 @@
                         <div>
                             <button class="ticket">Jegyvásárlás</button> <button class="koncertInfo">Részletek</button>
                         </div>
-                    <p class="adatok" hidden>Letisztult dallamok, őszinte hangzás és bensőséges hangulat. A Tiszta Hang az akusztikus zene erejével teremt közvetlen, meghitt élményt ahol minden hang természetesen szól, és minden pillanat közel kerül hozzád.</p>
                   </div>
-                  <p class="adatok" hidden>Suspendisse congue a elit id interdum. Donec ornare viverra congue.</p>
+                        <p class="adatok" hidden>Letisztult dallamok, őszinte hangzás és bensőséges hangulat. A Tiszta Hang az akusztikus zene erejével teremt közvetlen, meghitt élményt ahol minden hang természetesen szól, és minden pillanat közel kerül hozzád.</p>
                 </div>
             </article>
 
@@ -208,9 +203,8 @@
                         <div>
                             <button class="ticket">Jegyvásárlás</button> <button class="koncertInfo">Részletek</button>
                         </div>
-                    <p class="adatok" hidden>Lágy dallamok, kifinomult harmóniák és improvizatív szabadság. A Holdfény Trió a jazz eleganciáját és bensőséges hangulatát hozza el, ahol minden hang egy történetet mesél a nyugodt, éjszakai fények alatt.</p>
                   </div>
-                  <p class="adatok" hidden>Proin bibendum ut est eu venenatis. Quisque dolor lorem, fringilla ut velit in, eleifend convallis nibh.</p>
+                        <p class="adatok" hidden>Lágy dallamok, kifinomult harmóniák és improvizatív szabadság. A Holdfény Trió a jazz eleganciáját és bensőséges hangulatát hozza el, ahol minden hang egy történetet mesél a nyugodt, éjszakai fények alatt.</p>
                 </div>
             </article>
 
@@ -221,19 +215,20 @@
                             <div>
                                 <button class="ticket">Jegyvásárlás</button> <button class="koncertInfo">Részletek</button>
                             </div>
-                        <p class="adatok" hidden>Súlyos riffek, feszült atmoszféra és nyers energia. A ZajHatár az alternatív metal határmezsgyéjén mozog: egyszerre dühös, érzelmes és elementáris erejű zenei élmény, ami nem ismer kompromisszumot.</p>
                     </div>
-                    <p class="adatok" hidden>Ut eleifend urna elit, eget rutrum quam suscipit et.</p>
+                          <p class="adatok" hidden>Súlyos riffek, feszült atmoszféra és nyers energia. A ZajHatár az alternatív metal határmezsgyéjén mozog: egyszerre dühös, érzelmes és elementáris erejű zenei élmény, ami nem ismer kompromisszumot.</p>
                 </div>
             </article>
 
             <article>
                 <div class="koncert">
-                  <div>
-                    <span>  2026. December 31. - Pulzár|Techno - Neon Színpad - 14 990 Ft </span> <button class="ticket">Jegyvásárlás</button> <button class="koncertInfo">Részletek</button>
-                    <p class="adatok" hidden>Sötét, hipnotikus ütemek és lüktető basszusok. A Pulzár a techno nyers erejét hozza el: mélyre visz, magával ragad, és nem enged el a tánctér pulzáló világában.</p>
+                  <div class="felsoSor">
+                    <span>  2026. December 31. - Pulzár|Techno - Neon Színpad - 14 990 Ft </span> 
+                        <div>
+                            <button class="ticket">Jegyvásárlás</button> <button class="koncertInfo">Részletek</button> 
+                        </div>
                   </div>
-                  <p class="adatok" hidden>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sit amet viverra libero, at euismod nisi.</p>
+                      <p class="adatok" hidden>Sötét, hipnotikus ütemek és lüktető basszusok. A Pulzár a techno nyers erejét hozza el: mélyre visz, magával ragad, és nem enged el a tánctér pulzáló világában.</p>
                 </div>
             </article>
 
@@ -285,6 +280,7 @@
     </footer>
     <script src="../js/menu.js"></script>
     <script src="../js/programok.js"></script>
+    <script src="js/jegy-navigalas.js"></script>
 </body>
 
 </html>

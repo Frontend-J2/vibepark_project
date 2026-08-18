@@ -13,8 +13,44 @@
     display: none;
     z-index: 110;
 }
+.hambicon-line{
+    height: 3px;
+    border-radius: 3px;
+    width: 30px;
+    background-color: var(--text-color);
+}
 .navbar-toggler-icon{
-    font-size: 30px;
+    height: 50px;
+    width: 50px;
+    position: relative;
+}
+.hambline1,
+.hambline2,
+.hambline3{
+    transition: transform 0.2s ease;
+    position: absolute;
+}
+.hambline1{
+    top: 15px;
+    left: 10px;
+}
+.hambline2{
+    top: 25px;
+    left: 10px;
+}
+.hambline3{
+    top: 35px;
+    left: 10px;
+}
+.hambline1.kapcsolt{
+    transform: translateY(10px) rotate(45deg);
+    
+}
+.hambline2.kapcsolt{
+    opacity: 0;
+}
+.hambline3.kapcsolt{
+    transform: translateY(-10px) rotate(-45deg);
 }
 .nav{
     display: flex;
@@ -44,9 +80,9 @@
 .nav-list{
     width: 75%;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     flex-direction: row;
-    gap: 1.5rem;
+    gap: 3rem;
     padding: 1rem 2rem;
     }
 .nav-item{
@@ -114,6 +150,7 @@
         flex-direction: column;
         position: absolute;
         width: 230px;
+        gap: 1rem;
         border-radius: 16px;
         background-color: rgba(0, 0, 0, 0.03);
         backdrop-filter: blur(10px);

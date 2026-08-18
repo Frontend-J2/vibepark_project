@@ -19,7 +19,11 @@
             <p style="color: #34c8e8; padding-right: 8px; font-weight: bold;">Park</p>| Budapest
         </a>
         <button class="nav-toggler" onclick="hambOn()">
-            <span class="navbar-toggler-icon">&#9776;</span>
+            <div class="navbar-toggler-icon">
+                <div class="hambicon-line hambline1"></div>
+                <div class="hambicon-line hambline2"></div>
+                <div class="hambicon-line hambline3"></div>
+            </div>
         </button>
         <ul class="nav-list hidden-nav-list">
             <li class="nav-item hidden-nav-item">
@@ -81,12 +85,13 @@
 
 
         <div class="custom-shape-divider">
-            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-                <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+            <svg id="first-divider" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" 
+                class="shape-fill-first"></path>
             </svg>
         </div>
 
-        <h1 style="margin: 25px; text-align: center;">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h1>
+        <h1 style="margin: 25px; text-align: center;">Ahol a következő emlékek születnek !</h1>
 
 
         <section class="koncertek-grid">
@@ -123,8 +128,8 @@
                     <img src="img/koncertek/este.png" alt="Esti bulira hangolódás">
                 </div>
                 <div class="koncert-tartalom">
-                    <span class="datum">2026. JÚLIUS 20.</span>
-                    <h3>Summer Fest 2026</h3>
+                    <span class="datum">2026. SZEPTEMBER 30.</span>
+                    <h3>Outumn Fest 2026</h3>
                     <p class="leiras">Summer Fest 2026 egy nyári zenei és kulturális fesztivál, amely változatos koncertekkel, DJ szettekkel és színes programokkal várja a látogatókat.</p>
                     <a href="sites/jegyvasarlas.html" class="jegy-gomb" data-id="3">Jegyvásárlás</a>
                 </div>
@@ -138,8 +143,7 @@
                 <div class="koncert-tartalom">
                     <span class="datum">2026. OKTÓBER 20.</span>
                     <h3>Chill Fest 2026</h3>
-                    <p class="leiras">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                        ex ea commodo consequat.</p>
+                    <p class="leiras">Lazíts, engedd el a hetet, és merülj el a nyár legchillesebb fesztiválélményében! A Chill Fest 2026 laza zene, jó társaság, felejthetetlen pillanatok és hamisítatlan fesztiválhangulat egy helyen. Itt nincs rohanás csak zene, barátok és önfeledt kikapcsolódás!</p>
                     <a href="sites/jegyvasarlas.html" class="jegy-gomb" data-id="4">Jegyvásárlás</a>
                 </div>
             </div>
@@ -158,6 +162,13 @@
             </div>
 
         </section>
+
+        <div class="custom-shape-divider">
+            <svg id="second-divider" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" 
+                class="shape-fill-second"></path>
+            </svg>
+        </div>
 
        <section class="hex-gallery">
             <div class="gallery-big">
@@ -287,33 +298,40 @@
             </div>
         </section>
 
+        <div class="custom-shape-divider">
+            <svg id="third-divider" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" 
+                class="shape-fill-third"></path>
+            </svg>
+        </div>
+
         <div class="faq">
             <button class="q-btn">Gyakori kérdések</button>
             <div class="q-modal" hidden>
                 <div class="questions-szulo" >
                     <div class="kerdesek">
-                        <h4 class="kerdes">Aenean efficitur augue pharetra, sagittis metus et, elementum metus?</h4>
-                        <p class="valasz" hidden>Vivamus ut sapien et ex fringilla commodo.</p>
+                        <h4 class="kerdes">Van parkolási lehetőség?</h4>
+                        <p class="valasz" hidden>A helyszín saját őrzött parkolóval rendelkezik.</p>
                     </div>
 
                     <div class="kerdesek">
-                        <h4 class="kerdes">Duis tempus tellus euismod velit congue luctus?</h4>
-                        <p class="valasz" hidden>In hac habitasse platea dictumst.</p>
+                        <h4 class="kerdes">Kutyát/háziállatot be lehet vinni?</h4>
+                        <p class="valasz" hidden>A fesztivál területére háziállatot , a segítő- és vakvezető kutyák kivételével , nem lehet behozni. A fesztivál nagy tömege, a hangos zene és a meleg idő az állatok számára megterhelő lehet, ezért kérjük, kedvencedet hagyd otthon biztonságos környezetben.</p>
                     </div>
 
                     <div class="kerdesek">
-                        <h4 class="kerdes">Nulla vitae dolor euismod, ultrices magna a, tristique turpis?</h4>
-                        <p class="valasz" hidden>Nullam fermentum suscipit magna, ac venenatis nisl sagittis vitae.</p>
+                        <h4 class="kerdes">Mi a korhatár a koncerteken?</h4>
+                        <p class="valasz" hidden>A fesztivál programjai alapvetően korhatár nélkül látogathatók, azonban egyes koncertekre vagy programokra külön korhatár vonatkozhat. A 14 év alatti gyermekek számára nagykorú kísérő jelenléte javasolt, a 14 év alattiak pedig csak szülő vagy nagykorú kísérő felügyeletével látogathatják a rendezvényt.</p>
                     </div>
 
                     <div class="kerdesek">
-                        <h4 class="kerdes">Curabitur at diam efficitur, bibendum sem in, molestie nulla?</h4>
-                        <p class="valasz" hidden>Praesent accumsan leo sapien, et pellentesque leo faucibus nec.</p>
+                        <h4 class="kerdes">Van lehetőség étel- és italvásárlásra a fesztivál területén?</h4>
+                        <p class="valasz" hidden>Igen, a fesztivál területén több büfé, étel- és italpult várja a látogatókat. Többféle étel és ital közül lehet választani, így vegetáriánus és egyéb étkezési igényekre is igyekszünk megfelelő lehetőségeket biztosítani.</p>
                     </div>
 
                     <div class="kerdesek">
-                        <h4 class="kerdes">Praesent at magna at purus ultrices bibendum?</h4>
-                        <p class="valasz" hidden>Donec pellentesque orci at augue tincidunt</p>
+                        <h4 class="kerdes">Mi történik, ha elveszítek valamit a fesztiválon?</h4>
+                        <p class="valasz" hidden>Az elveszett tárgyakat a fesztivál információs pontján lehet leadni és érdeklődni az elveszett tárgyak iránt. Ha megtaláljuk a keresett tárgyat, az átvételhez szükség lehet a tulajdonjog igazolására. A fesztivál után az elveszett tárgyakkal kapcsolatos érdeklődést az elérhetőségeinken keresztül is fogadjuk.</p>
                     </div>
                 </div>
             </div>
