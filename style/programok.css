@@ -22,8 +22,8 @@
     gap: 10px;
     padding: 20px;
     border-radius: 12px;
-    color: var(--title-color);
-    background-color:  #1a1a24;
+    color: var(--program-color);
+    background-color:  var(--program-background);
    border: 1px solid rgba(255, 255, 255, .08);
    margin-bottom: 1px;
 }
@@ -34,7 +34,7 @@
 }
 
 h3 {
-    color: var(--text-color);
+    color: var(--programh3-color);
     margin-bottom: 10px;
 }
 
@@ -46,10 +46,21 @@ h3 {
     margin-top: 5px;
 }
 
-.koncertInfo,  .ticket, .ticket-error{
+.koncertInfo{  
     cursor: pointer;
+    background: var(--koncertInfo-background);
+    
 }
-
+.ticket{
+    cursor: pointer;
+    background: var(--koncertTicket-background);
+    
+}
+.ticket-error{
+    cursor: pointer;
+    background: var(--koncertTicketError-background);
+    
+}
 
 
 

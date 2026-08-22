@@ -137,6 +137,7 @@ html, body {
 
 .gallery-section {
     padding: 80px 0;
+    background: var(--gallery-background);
 }
 
 .section-title {

@@ -66,7 +66,7 @@
 
     padding-left: 4rem;
     color: white;
-    color: var(--text-color);
+    color: var(--hero-text);
     text-shadow: -2px -2px 4px rgb(0, 0, 0), 2px 2px 4px rgb(0, 0, 0);
 }
 .hero-disc h1{
@@ -155,7 +155,7 @@
     padding-right: 4rem;
     height: 70px;
     border: none;
-    color: var(--text-color);
+    color: var(--ticket-color);
     font-size: 20px;
     background-color: transparent;
     background-image: url(../img/hoverbrush/hoverbrush.png);

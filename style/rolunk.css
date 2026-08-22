@@ -24,7 +24,7 @@
 
 .about-header .subtitle {
     font-size: 1.2rem;
-    color: #ccc;
+    color: var(--aboutP-color);
     font-weight: 300;
 }
 
@@ -34,7 +34,7 @@
     grid-template-columns: 1fr 1fr;
     gap: 20px;
     align-items: center;
-    background: #16161f;
+    background: var(--storyGrid-background);
     padding: 30px;
     border-radius: 16px;
     border: 1px solid #282838;
@@ -70,7 +70,7 @@
 }
 
 .story-text p {
-    color: #ccc;
+    color: var(--storytextP-color);
     line-height: 1.7;
     font-size: 1rem;
     margin-bottom: 15px;
@@ -85,7 +85,7 @@
 }
 
 .stat-card {
-    background: #1a1a24;
+    background: var(--statcard-background);
     border: 1px solid #333;
     border-radius: 12px;
     padding: 25px;
@@ -112,7 +112,7 @@
 }
 
 .stat-label {
-    color: #ddd;
+    color: var(--statLab-color);
     font-size: 1rem;
     margin-top: 5px;
 }
@@ -126,27 +126,27 @@
 }
 
 .detail-block {
-    background: #16161f;
+    background: var(--detailBlock-background);
     padding: 25px;
     border-radius: 12px;
     border-left: 4px solid #ff3f98;
 }
 
 .detail-block h3 {
-    color: #fff;
+    color: var(--detailH3-color);
     margin-top: 0;
     margin-bottom: 12px;
 }
 
 .detail-block p {
-    color: #bbb;
+    color: var(--detailBlock-color);
     line-height: 1.6;
     margin: 0;
 }
 
 /* HÁZIREND KÁRTYA & LETÖLTÉS */
 .house-rules-card {
-    background: linear-gradient(135deg, #1f1b2e, #16161f);
+    background: var(--houseRule-background);
     border-radius: 16px;
     padding: 35px;
     text-align: center;
@@ -160,7 +160,7 @@
 }
 
 .rules-content p {
-    color: #ccc;
+    color: var(--rulesP-color);
     max-width: 600px;
     margin: 0 auto 25px auto;
 }

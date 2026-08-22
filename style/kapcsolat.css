@@ -79,7 +79,7 @@
 }
 
 .contact-header p {
-    color: #ccc;
+    color: var(--contactP-color);
     font-size: 1.1rem;
 }
 
@@ -94,7 +94,7 @@
 }
 
 .info-card {
-    background: #1a1a24;
+    background: var(--infocard-background);
     border: 1px solid #333;
     border-radius: 12px;
     padding: 25px;
@@ -118,7 +118,7 @@
 }
 
 .info-card p, .info-card a {
-    color: #ddd;
+    color: var(--infocardP-color);
     text-decoration: none;
     font-size: 0.95rem;
 }
@@ -145,7 +145,7 @@
 
 /* ŰRLAP FORMÁZÁS */
 .form-section, .map-section {
-    background: #16161f;
+    background: var(--mapformsec-background);
     padding: 30px;
     border-radius: 12px;
     border: 1px solid #282838;
@@ -219,7 +219,7 @@
    5. MEGKÖZELÍTÉS SZEKCIÓ
    ========================================== */
 .location-guide {
-    background: #16161f;
+    background: var(--locguide-background);
     padding: 30px;
     border-radius: 12px;
     border: 1px solid #282838;
@@ -232,7 +232,7 @@
 }
 
 .guide-item {
-    background: #20202c;
+    background: var(--guideitem-background);
     padding: 20px;
     border-radius: 8px;
     border-left: 4px solid #34c8e8;
@@ -240,13 +240,13 @@
 
 .guide-item h3 {
     margin-top: 0;
-    color: #fff;
+    color: var(--guideh3-color);
     font-size: 1.1rem;
     margin-bottom: 10px;
 }
 
 .guide-item p {
-    color: #bbb;
+    color: var(--guideP-color);
     font-size: 0.95rem;
     line-height: 1.5;
     margin: 0;

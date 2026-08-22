@@ -15,7 +15,43 @@
     --title-color: #ff6b45; /*cím szín*/
     --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /*betűtipus*/
     /*--background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);*/
-    --background: #302b63;
+    
+    /*világosmód váltáshoz színek*/
+        --background: #302b63;
+        --nav-background: #000;
+        --nav-text: #fff;
+        --nav-background: rgba(0, 0, 0, 0.3);
+        --hero-text: var(--text-color);
+        --ticket-color: var(--text-color);
+        --kartya-background: #2c2727;
+        --program-background: #1a1a24;
+        --programh3-color: var(--text-color);
+        --program-color: var(--title-color);
+        --koncertInfo-background: #34c8e8;
+        --koncertTicket-background: #34c8e8;
+        --koncertTicketError-background: #34c8e8;
+        --gallery-background: var(--background);
+    /*Rólunk rész*/
+        --statcard-background: #1a1a24;
+        --storyGrid-background: #16161f;
+        --detailBlock-background: #16161f;
+        --houseRule-background: linear-gradient(135deg, #1f1b2e, #16161f);
+        --aboutP-color: #ccc;
+        --storytextP-color: #ccc;
+        --statLab-color: #ddd;
+        --detailBlock-color: #bbb;
+        --detailH3-color: #fff;
+        --rulesP-color: #ccc;
+    /*Kapcsolat*/
+        --contactP-color: #fff;
+        --infocardP-color: #ddd;
+        --infocard-background: #1a1a24;
+        --mapformsec-background: #16161f;
+        --guideitem-background: #20202c;
+        --guideh3-color: #fff;
+        --guideP-color: #bbb;
+        --locguide-background: #16161f;
+        
 }
 
 body {
@@ -189,4 +225,53 @@ footer p{
         align-items: center;
         text-align: center;
     }
+}
+
+/*világos mód*/
+
+#themeBtn {
+    cursor: pointer;
+}
+
+body.light-mode {
+    --background: #f5f5f5;
+    --surface-color: #ffffff;
+    --text-color: #222222;
+    --muted-text: #666666;
+    --title-color: #302b63;
+    --text-hover: #ff3f98;
+    --nav-text: #222;
+    --nav-background: rgba(223, 223, 232, 0.5);
+    --hero-text: red;
+    /*Programok*/
+        --ticket-color: red;
+        --kartya-background: #F0EFFD;
+        --program-background: #DFDFE8;
+        --programh3-color: red;
+        --program-color:  #ff3f98;
+        --koncertInfo-background: #34c8e8;
+        --koncertTicket-background: #34c8e8;
+        --koncertTicketError-background: #34c8e8;
+    /*Galéria*/
+        --gallery-background: rgba(223, 223, 232, 0);
+    /*Rólunk*/
+        --statcard-background: #DFDFE8;
+        --storyGrid-background: #DFDFE8;
+        --detailBlock-background: #DFDFE8;
+        --houseRule-background: #DFDFE8;
+        --aboutP-color: #3333ff;
+        --storytextP-color: #3333ff;
+        --statLab-color: #3333ff;
+        --detailBlock-color: #3333ff;
+        --detailH3-color: #ff3f98;
+        --rulesP-color: #3333ff;
+    /*Kapcsolat*/
+        --contactP-color: black;
+        --infocardP-color: black;
+        --infocard-background: #DFDFE8;
+        --mapformsec-background: #DFDFE8;
+        --guideitem-background: white;
+        --guideh3-color: #ff3f98;
+        --guideP-color: black;
+        --locguide-background: #DFDFE8;
 }
