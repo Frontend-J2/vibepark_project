@@ -1,0 +1,174 @@
+.loader-animation{
+    height: 100vh;
+    width: 100%;
+    background-color: white;
+    position: absolute;
+    transition: opacity 1s ease;
+    background: linear-gradient(135deg,
+                            #ffecc3,
+                            #f0d9ff,
+                            #ddf9ff);
+    z-index: 1999;
+}
+.logoszoveg{
+    background-image: url(../img/toltoanimalas/logoszoveg.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    height: 200px;
+    width: 200px;
+    position: absolute;
+    left: calc(50% - 100px);
+    top: calc(50% - 200px);
+
+    z-index: 2020;
+}
+.logosavfelso{
+    background-image: url(../img/toltoanimalas/logofesteksavfelso.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    height: 200px;
+    width: 200px;
+    position: absolute;
+    left: calc(50% - 100px);
+    top: calc(50% - 200px);
+
+    z-index: 2000;
+}
+.logosavalso{
+    background-image: url(../img/toltoanimalas/logofesteksavalso.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    height: 200px;
+    width: 200px;
+    position: absolute;
+    left: calc(50% - 100px);
+    top: calc(50% - 200px);
+
+    z-index: 2000;
+}
+
+.festekjon{
+    animation: festekjon 1.3s linear;
+}
+@keyframes festekjon{
+    from {
+        transform: scale(0) rotate(0deg);
+    }
+    to {
+        transform: scale(1) rotate(720deg);
+    }
+}
+
+.feliratjon{
+    animation: feliratjon 1s linear;
+}
+@keyframes feliratjon{
+    from {
+        transform: scale(0);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+.beat{
+    animation: heartbeat 1.2s infinite;
+}
+@keyframes heartbeat {
+    0% {
+        transform: scale(1);
+    }
+    10% {
+        transform: scale(1.1);
+    }
+    20% {
+        transform: scale(1);
+    }
+    30% {
+        transform: scale(1.05);
+    }
+    40% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.lelegzik1{
+    animation: lelegzik 4s ease-in-out infinite;
+}
+.lelegzik2{
+    animation: lelegzikforditva 4s ease-in-out infinite;
+}
+@keyframes lelegzik {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-6px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+@keyframes lelegzikforditva {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(6px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.animout{
+    animation: animationout 1.5s ease-in;
+}
+@keyframes animationout{
+    from{
+        transform: scale(1);
+        opacity: 1;
+    }
+    to{
+        transform: scale(30);
+        opacity: 0;
+    }
+}
+
+.tolto{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    width: 240px;
+    top: 50%;
+    left: calc(50% - 120px);
+    transition: all 0.5s ease;
+    opacity: 0;
+}
+.toltofelirat{
+    color: #ae00ff;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.toltosav{
+    height: 10px;
+    width: 0px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+.toltogradient{
+    height: 10px;
+    width: 240px;
+    background: linear-gradient(90deg,
+                            #ffb000,
+                            #ff006e,
+                            #9b00ff,
+                            #00cfff);
+}
