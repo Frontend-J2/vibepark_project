@@ -8,6 +8,7 @@ const loaderContent = document.querySelector(".loader-animation");
 let toltesertek = 0;
 let szazalek = 0;
 
+document.body.style.overflow = "hidden";
 felirat.classList.add("feliratjon");
 festekfent.classList.add("festekjon");
 festeklent.classList.add("festekjon");
@@ -53,5 +54,6 @@ function kesz (){
 
     setTimeout(() => {
         loaderContent.style.display = "none";
+        document.body.style.overflow = "";
     }, 1000)
 };
