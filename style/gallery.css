@@ -133,6 +133,12 @@ html, body {
 }
 }
 
+@media (max-width: 630px) {
+    .hex-gallery {
+        --cell-size: clamp(150px, 34.9vw, 220px);
+    }
+}
+
 /*Galéria lap*/
 
 .gallery-section {
