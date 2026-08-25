@@ -45,7 +45,7 @@ const programs = [
 
     {
         id: 3,
-        name: "Outumn Fest 2026",
+        name: "Autumn Fest 2026",
         date: "2026. SZEPTEMBER 30.",
         time: "18:00",
         place: "Vibe Park Budapest",
