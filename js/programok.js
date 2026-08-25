@@ -153,8 +153,8 @@ const nemelerheto = document.querySelectorAll(".ticket-nem")
 
 info.forEach(function(gomb){
     gomb.addEventListener("click", function(){
-        const koncert = gomb.closest(".koncert");
-        const adatok = koncert.querySelector(".adatok");
+        const koncertEsLeiras = gomb.closest(".koncertEsLeiras");
+        const adatok = koncertEsLeiras.querySelector(".adatok");
 
         adatok.hidden = !adatok.hidden;
     });
