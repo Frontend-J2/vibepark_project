@@ -1,11 +1,8 @@
 const loaderContent = document.querySelector(".loader-animation");
 
 if (sessionStorage.getItem("loaderShown")) {
-
     loaderContent.style.display = "none";
-
 } else {
-
     sessionStorage.setItem("loaderShown", "true");
 
     const festekfent = document.querySelector(".logosavfelso");
