@@ -122,7 +122,7 @@ const programs = [
     {
         id: 6,
         name: "Midnight Echo",
-        date: "2026. SZEPTEMBER 05.",
+        date: "2026. November 21.",
         time: "23:00",
         place: "Vibe Park Budapest",
         image: "img/koncertek/belteri2.png",
@@ -156,17 +156,17 @@ info.forEach(function(gomb){
         const koncertEsLeiras = gomb.closest(".koncertEsLeiras");
         const adatok = koncertEsLeiras.querySelector(".adatok");
 
-        adatok.hidden = !adatok.hidden;
+        adatok.classList.toggle("mutat");
     });
 });
 
 coming.addEventListener("click", function(){
-    morekoncert.hidden = !morekoncert.hidden
+    morekoncert.classList.toggle("hidden");
     
-    if(!morekoncert.hidden){
-    coming.innerText = "Kevesebb program";
+    if(morekoncert.classList.contains("hidden")){
+    coming.innerText = "További Események";
 }else {
-    coming.innerText = "Coming soon..."
+    coming.innerText = "Kevesebb Program";
 }
     
 });

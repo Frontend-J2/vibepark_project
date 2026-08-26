@@ -53,6 +53,7 @@ h2{
     color: #ff4757;
 }
 .datum{
+    width: 80px;
     color: #ff4757;
     text-transform: uppercase;
     font-size: 12px;
@@ -98,13 +99,22 @@ h2{
     gap: .5rem;
 }
 #showMoreBtn {
-    cursor: pointer;
-    justify-content: center;
-    display: flex;
-    margin-bottom: 5px;
-    margin-top: 5px;
+    margin: 2rem;
+    display: inline-block;
+    text-align: center;
+    background-color: #ff4757;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: background-color 0.2s ease;
+    width: 125px;
 }
-
+#showMoreBtn:hover{
+    background-color: #e84118;
+}
 .koncertInfo{  
     display: inline-block;
     text-align: center;
@@ -130,24 +140,29 @@ h2{
     border-radius: 6px;
     font-weight: bold;
     transition: background-color 0.2s ease;
+    width: 125px;
 }
 .ticket:hover{
     background-color: #e84118;
 }
 .ticket-error{
-    cursor: pointer;
-    background: var(--koncertTicketError-background);
-    
+    display: inline-block;
+    text-align: center;
+    background-color: #eb44526c;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    width: 125px;
 }
 
 
 
 .felsoSor{
-
     display:flex;
-
     justify-content:space-between;
-    
     align-items:center;
 }
 
@@ -158,23 +173,25 @@ h2{
     gap:10px;
 }
 .adatok{
-    margin-top:15px;
-    padding-top:15px;
-
+    padding: .1rem  2rem;
     border-top:1px solid rgba(255,255,255,.08);
-
     color:#cfcfcf;
-
     line-height:1.6;
+    max-height: 0px;
+    transition: max-height .3s ease;
+    overflow: hidden;
+}
+.adatok.mutat{
+    max-height: 1000px;
 }
 
-#moreKoncert {
-    
+.moreKoncert {
     width: 100%;
-    
-}
-
-.ticket-nem {
     display: flex;
-    cursor: pointer;
+    flex-direction: column;
+    gap: 8px;
+    align-items: center;
+}
+.hidden{
+    display: none;
 }
