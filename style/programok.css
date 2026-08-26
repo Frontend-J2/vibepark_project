@@ -8,6 +8,13 @@
     border-radius: 15px;
     max-width: 1200px;
 }
+@media (max-width: 600px){
+    .koncert-list{
+        margin: 2px;
+        margin-top: 4rem;
+        padding: 0;
+    }
+}
 
 .programLista{
     display: flex;
@@ -97,6 +104,18 @@ h2{
     display: flex;
     flex-direction: row;
     gap: .5rem;
+}
+@media (max-width: 850px){
+    .koncert{
+        height: 150px;
+        position: relative;
+        padding-bottom: 50px;
+    }
+    .gombok{
+        position: absolute;
+        bottom: 5px;
+        left: calc(50% - 100px);
+    }
 }
 #showMoreBtn {
     margin: 2rem;
