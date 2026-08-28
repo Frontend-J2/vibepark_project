@@ -7,7 +7,6 @@
 /* Fő rács elrendezés */
 .koncertek-grid {
     display: grid;
-    background: #302b63;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 25px;
     padding: 20px;
@@ -21,7 +20,7 @@
     background-color: var(--kartya-background);
     border-radius: 12px;
     overflow: hidden;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     display: flex;
     flex-direction: column;
@@ -112,18 +111,18 @@
     height: 60px;
 }
 #first-divider{
-    background: #302b63;
+    background: var(--background);
 }
 #second-divider{
-    background: #2c2727;
+    background: var(--gallery);
 }
 
 .custom-shape-divider .shape-fill-first {
-    fill: #0f0e0e; 
+    fill: var(--gallery); 
 }
 .custom-shape-divider .shape-fill-second {
-    fill: #302b63; 
+    fill: var(--background); 
 }
 .custom-shape-divider .shape-fill-third {
-    fill: #2c2727; 
+    fill: var(--gallery); 
 }

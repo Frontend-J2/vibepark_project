@@ -18,6 +18,7 @@
     
     /*világosmód váltáshoz színek*/
         --background: #302b63;
+        --gallery: #2c2727;
         --nav-background: #000;
         --nav-text: #fff;
         --nav-background: rgba(0, 0, 0, 0.3);
@@ -161,7 +162,7 @@ footer p{
 }
 
 .site-footer {
-    background: #2c2727;
+    background: var(--gallery);
     display: flex;
     justify-content: space-evenly;
     align-items: flex-start;
@@ -258,6 +259,7 @@ footer p{
 
 body.light-mode {
     --background: #f5f5f5;
+    --gallery: #302b63;
     --surface-color: #ffffff;
     --text-color: #222222;
     --muted-text: #666666;
