@@ -128,13 +128,15 @@ td, th{
 }
 
 .faq{
+    background: rgba(0, 0, 0, 0.3);
     position: relative;
-    max-width: 1200px;
+    max-width: 550px;
     margin: auto;
     padding: 1rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    text-align: center;
 }
 .questions-szulo{
     display: flex;
@@ -144,26 +146,47 @@ td, th{
 .kerdes{
     cursor: pointer;
     color: var(--title-color);
+    margin: .5rem;
 }
 .kerdes:hover{
     color: #ff6b45;
-    transform: scale(1.02);
+    transform: scale(1.2);
 }
 .valasz{
-    color: var(--muted-text);
-    margin-top: .5rem;
+    color: var(--text-color);
+    margin: .5rem;
 }
 footer p{
     color: var(--text-color);
 }
 
 .site-footer {
+    background: #2c2727;
     display: flex;
     justify-content: space-evenly;
     align-items: flex-start;
     flex-wrap: wrap;
     gap: 40px;
     padding: 60px 20px;
+}
+
+.hirlevel{
+    text-align: center;
+    padding: 20px;
+}
+#hirlevel{
+    color: var(--text-color);
+}
+#felbtn{
+    padding: 10px;
+    margin: 10px;
+    border-radius: 15px;
+    background: linear-gradient(45deg, #ff3f98, #34c8e8);
+    cursor: pointer;
+}
+#felbtn:hover{
+    scale: 1.2;
+    background: linear-gradient(45deg, #34c8e8, #ff3f98);
 }
 
 .footer-contact,
