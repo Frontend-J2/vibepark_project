@@ -19,9 +19,6 @@
     /*világosmód váltáshoz színek*/
         --background: #302b63;
         --gallery: #2c2727;
-        --nav-background: #000;
-        --nav-text: #fff;
-        --nav-background: rgba(0, 0, 0, 0.3);
         --hero-text: var(--text-color);
         --ticket-color: var(--text-color);
         --kartya-background: #2c2727;
@@ -193,6 +190,7 @@ footer p{
 .footer-contact,
 .footer-social,
 .footer-legal {
+    color: #ffd43b;
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -207,6 +205,7 @@ footer p{
 .footer-heading {
     margin: 0;
     font-weight: bold;
+    color: #ffd43b;
 }
 
 .social-icons {
@@ -215,7 +214,6 @@ footer p{
 }
 
 .social-icons a {
-    color: inherit;
     display: flex;
 }
 
@@ -226,7 +224,7 @@ footer p{
 
 .footer-contact a,
 .footer-legal a {
-    color: inherit;
+    color: #ffd43b;
     text-decoration: none;
 }
 
@@ -235,7 +233,10 @@ footer p{
 .social-icons a:hover {
     opacity: 0.7;
 }
-
+.footer-jogved,
+.footer-address{
+    color: #ffd43b;
+}
 @media (max-width: 700px) {
     .site-footer {
         flex-direction: column;
@@ -264,10 +265,6 @@ body.light-mode {
     --text-color: #222222;
     --muted-text: #666666;
     --title-color: #302b63;
-    --text-hover: #ff3f98;
-    --nav-text: #222;
-    --nav-background: rgba(223, 223, 232, 0.5);
-    --hero-text: red;
     /*Programok*/
         --ticket-color: red;
         --kartya-background: #F0EFFD;
@@ -299,4 +296,26 @@ body.light-mode {
         --guideh3-color: #ff3f98;
         --guideP-color: black;
         --locguide-background: #DFDFE8;
+}
+.theme-out{
+    margin-top: 5px;
+    height: 20px;
+    width: 40px;
+    border: solid 1px grey;
+    border-radius: 10px;
+    position: relative;
+    scale: 1.4;
+}
+.theme-in{
+    position: absolute;
+    left: 2px;
+    top: 2px;
+    height: 14px;
+    width: 14px;
+    transition: all 0.2s ease;
+
+    font-size: 11px;
+}
+.theme-in.on{
+    left: 22px;
 }
